@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beiiqubqirprc"
-path="res://.godot/imported/board.jpg-dd231f3362144bcca88a5a192f0d5e1a.ctex"
+uid="uid://uj6chnyn4xix"
+path="res://.godot/imported/amazones.png-a18e6899c2c54e25a115f4ba25d4ab6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/board.jpg"
-dest_files=["res://.godot/imported/board.jpg-dd231f3362144bcca88a5a192f0d5e1a.ctex"]
+source_file="res://assets/images/amazones.png"
+dest_files=["res://.godot/imported/amazones.png-a18e6899c2c54e25a115f4ba25d4ab6c.ctex"]
 
 [params]
 

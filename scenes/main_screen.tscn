@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0a7nvwligf0h"]
 
-[ext_resource type="Texture2D" uid="uid://beiiqubqirprc" path="res://assets/board.jpg" id="1_bw3vb"]
-[ext_resource type="PackedScene" uid="uid://7svj2yejpgxs" path="res://scenes/game_manager.tscn" id="1_nglv8"]
-[ext_resource type="PackedScene" uid="uid://vrww3b18dhra" path="res://scenes/loader.tscn" id="2_fv4ni"]
-[ext_resource type="PackedScene" uid="uid://e2ik4g2s6uyc" path="res://scenes/region.tscn" id="3_nglv8"]
+[ext_resource type="PackedScene" uid="uid://7svj2yejpgxs" path="res://scenes/game_manager.tscn" id="1_lushf"]
+[ext_resource type="PackedScene" uid="uid://vrww3b18dhra" path="res://scenes/loader.tscn" id="2_w87pm"]
+[ext_resource type="Texture2D" uid="uid://beiiqubqirprc" path="res://assets/images/board.jpg" id="3_a46j4"]
+[ext_resource type="PackedScene" uid="uid://e2ik4g2s6uyc" path="res://scenes/region.tscn" id="4_23dc1"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Game_manager" parent="." instance=ExtResource("1_nglv8")]
-loader = ExtResource("2_fv4ni")
+[node name="Game_manager" parent="." instance=ExtResource("1_lushf")]
+loader = ExtResource("2_w87pm")
 
 [node name="Board" type="Polygon2D" parent="."]
 color = Color(0.4982671, 0.38971585, 0.19107857, 1)
@@ -16,25 +16,27 @@ polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
 
 [node name="Map" type="Sprite2D" parent="Board"]
 position = Vector2(697, 305)
-texture = ExtResource("1_bw3vb")
+texture = ExtResource("3_a46j4")
 
-[node name="region_1" parent="Board/Map" instance=ExtResource("3_nglv8")]
+[node name="region_1" parent="Board/Map" instance=ExtResource("4_23dc1")]
 position = Vector2(-396, 215)
 
 [node name="CollisionPolygon2D" parent="Board/Map/region_1/Area2D" index="0"]
+visible = false
 polygon = PackedVector2Array(1, 0, 10, -3, 25, -3, 35, -6, 44, -6, 56, -3, 64, -4, 76, -10, 83, -14, 98, -14, 107, -17, 112, -16, 132, -5, 138, -5, 142, -6, 140, 1, 132, 5, 134, 20, 133, 25, 126, 35, 127, 45, 125, 47, 1, 47)
 
 [node name="Polygon2D" parent="Board/Map/region_1/Area2D" index="1"]
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(1, 0, 10, -3, 25, -3, 35, -6, 44, -6, 56, -3, 64, -4, 76, -10, 83, -14, 98, -14, 107, -17, 112, -16, 132, -5, 138, -5, 142, -6, 140, 1, 132, 5, 134, 20, 133, 25, 126, 35, 127, 45, 125, 47, 1, 47)
 
-[node name="region_2" parent="Board/Map" instance=ExtResource("3_nglv8")]
+[node name="region_2" parent="Board/Map" instance=ExtResource("4_23dc1")]
 position = Vector2(-396, 215)
 
 [node name="Area2D" parent="Board/Map/region_2" index="0"]
 position = Vector2(125, 0)
 
 [node name="CollisionPolygon2D" parent="Board/Map/region_2/Area2D" index="0"]
+visible = false
 polygon = PackedVector2Array(1, 47, 1, 36, 9, 22, 7, 7, 8, 5, 14, 2, 17, -6, 31, -23, 31, -28, 45, -37, 44, -42, 55, -46, 66, -33, 70, -33, 74, -29, 95, -29, 106, -24, 107, -23, 110, -5, 113, -2, 119, 0, 121, 3, 132, 8, 127, 16, 125, 27, 128, 33, 146, 47)
 
 [node name="Polygon2D" parent="Board/Map/region_2/Area2D" index="1"]

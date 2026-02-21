@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uj6chnyn4xix"
-path="res://.godot/imported/amazones.png-c730cc204e5503c5921f2b9b5e920030.ctex"
+uid="uid://bkclsuxv86of0"
+path="res://.godot/imported/connection_screen.png-1656e75c02cab7897d466161bf9e982f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/amazones.png"
-dest_files=["res://.godot/imported/amazones.png-c730cc204e5503c5921f2b9b5e920030.ctex"]
+source_file="res://assets/images/connection_screen.png"
+dest_files=["res://.godot/imported/connection_screen.png-1656e75c02cab7897d466161bf9e982f.ctex"]
 
 [params]
 

@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://bn516j3k1jd4l"]
+
+[ext_resource type="Texture2D" uid="uid://bkclsuxv86of0" path="res://assets/images/connection_screen.png" id="1_015mm"]
+[ext_resource type="FontFile" uid="uid://bd7uocciuawmv" path="res://assets/fonts/(KING ARTHUR).ttf" id="2_0hy3y"]
+[ext_resource type="Script" uid="uid://bjobernxgol1" path="res://scripts/connection_manager.gd" id="2_hmnvu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6s73"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8c6fj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sef50"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xetyi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jsvdv"]
+
+[node name="Connection" type="Node2D"]
+
+[node name="Connection_manager" type="Node" parent="."]
+script = ExtResource("2_hmnvu")
+
+[node name="Connection_screen" type="Sprite2D" parent="."]
+position = Vector2(576, 264)
+texture = ExtResource("1_015mm")
+
+[node name="Steam_HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 526.0
+offset_top = 336.0
+offset_right = 566.0
+offset_bottom = 376.0
+
+[node name="Panel" type="Panel" parent="Steam_HUD"]
+layout_mode = 0
+
+[node name="Options" type="VBoxContainer" parent="Steam_HUD/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 50
+
+[node name="Host" type="Button" parent="Steam_HUD/Panel/Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_0hy3y")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e6s73")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8c6fj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sef50")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xetyi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jsvdv")
+text = "HOST"
+
+[node name="Join" type="Button" parent="Steam_HUD/Panel/Options"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_0hy3y")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e6s73")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8c6fj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sef50")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xetyi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jsvdv")
+text = "JOIN"
+
+[node name="Lobbies" type="ScrollContainer" parent="Steam_HUD/Panel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 80.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Steam_HUD/Panel/Lobbies"]
+layout_mode = 2
+
+[connection signal="pressed" from="Steam_HUD/Panel/Options/Host" to="Connection_manager" method="become_host"]
+[connection signal="pressed" from="Steam_HUD/Panel/Options/Join" to="Connection_manager" method="list_lobbies"]

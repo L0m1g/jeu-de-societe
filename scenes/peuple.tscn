@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://btdnc6vvio0sp"]
 
-[ext_resource type="Texture2D" uid="uid://uj6chnyn4xix" path="res://assets/amazones.png" id="1_u7u7f"]
+[ext_resource type="Texture2D" uid="uid://uj6chnyn4xix" path="res://assets/images/amazones.png" id="1_u7u7f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o2ahi"]
 font_color = Color(0, 0, 0, 1)

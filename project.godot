@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/global.gd"
+Global="*res://global.gd"
+SteamManager="*res://steam_manager.gd"
 
 [editor]
 

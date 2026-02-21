@@ -7,7 +7,9 @@ outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Loader" type="Label"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 296.0
+offset_top = 296.0
+offset_right = 842.0
+offset_bottom = 349.0
 text = "En attente de tous les joueurs"
 label_settings = SubResource("LabelSettings_uc6ls")
