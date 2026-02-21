@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://btdnc6vvio0sp"]
+
+[ext_resource type="Texture2D" uid="uid://uj6chnyn4xix" path="res://assets/amazones.png" id="1_u7u7f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o2ahi"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="peuple" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.36602482, 0.31780204, 0.18637899, 1)
+polygon = PackedVector2Array(0, 0, 0, 64, 0, 64, 192, 64, 160, 32, 192, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Polygon2D"]
+position = Vector2(31.999998, 31.999998)
+scale = Vector2(0.7162162, 0.7133333)
+texture = ExtResource("1_u7u7f")
+
+[node name="Label" type="Label" parent="Polygon2D"]
+offset_left = 72.0
+offset_top = 5.0
+offset_right = 152.0
+offset_bottom = 28.0
+text = "Amazones"
+label_settings = SubResource("LabelSettings_o2ahi")

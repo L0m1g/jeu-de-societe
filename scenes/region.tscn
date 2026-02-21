@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://e2ik4g2s6uyc"]
+
+[ext_resource type="Script" uid="uid://dikq68r4momvf" path="res://scripts/area_2d.gd" id="1_6hh2v"]
+
+[node name="region" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_6hh2v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(143, -1, 147, 167, 2, 172, -1, 2)
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-1, 2, 143, -1, 147, 167, 2, 172)
