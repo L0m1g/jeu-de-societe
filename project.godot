@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="Jeu de societe"
-run/main_scene="uid://c0a7nvwligf0h"
+run/main_scene="uid://bn516j3k1jd4l"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://global.gd"
+NetworkManager="*res://scripts/network_manager.gd"
 SteamManager="*res://steam_manager.gd"
+GameManager="*res://scripts/game_manager.gd"
 
 [editor]
 

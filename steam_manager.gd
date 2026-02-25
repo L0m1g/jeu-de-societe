@@ -44,7 +44,12 @@ func initialize_steam():
 
 func become_host():
 	print("Starting host!")
+	multiplayer_peer = SteamMultiplayerPeer.new()
 	Steam.createLobby(Steam.LOBBY_TYPE_PUBLIC, lobby_max_members)
+
+func join_as_client(lobby_id):
+	print("Joining lobby %s" % lobby_id)
+	Steam.joinLobby(lobby_id)
 
 func list_lobbies():
 	Steam.addRequestLobbyListDistanceFilter(Steam.LOBBY_DISTANCE_FILTER_WORLDWIDE)
@@ -61,21 +66,31 @@ func _on_lobby_created(connect_status: int, lobby_id):
 		_hosted_lobby_id = lobby_id
 
 		multiplayer_peer.host_with_lobby(lobby_id)
-		#multiplayer.multiplayer_peer = multiplayer_peer
+		multiplayer.multiplayer_peer = multiplayer_peer
+		
+		multiplayer.peer_disconnected.connect(NetworkManager.del_player)
 		
 		Steam.setLobbyJoinable(_hosted_lobby_id, true)
 		Steam.setLobbyData(_hosted_lobby_id, "name", LOBBY_NAME)
 		Steam.setLobbyData(_hosted_lobby_id, "mode", LOBBY_MODE)
-
-func join_as_client(lobby_id):
-	print("Joining lobby %s" % lobby_id)
-	Steam.joinLobby(lobby_id)
+		
+		_register_local_player()
 
 func _on_lobby_joined(lobby_id: int, _permissions: int, _locked: bool, _response: int) -> void:
 	print("On lobby joined %s" % lobby_id)
 	if Steam.getLobbyOwner(lobby_id) == Steam.getSteamID():
 		print("Lobby host already in lobby, bypassing...")
 		return
-		
+	
+	multiplayer_peer = SteamMultiplayerPeer.new()
 	multiplayer_peer.connect_to_lobby(lobby_id)
 	multiplayer.multiplayer_peer = multiplayer_peer
+	
+	multiplayer.connected_to_server.connect(_on_connected_to_server, CONNECT_ONE_SHOT)
+
+func _on_connected_to_server():
+	print("Connected to server, registering player...")
+	_register_local_player()
+
+func _register_local_player():
+	NetworkManager.register_player.rpc(steam_id, steam_username)

@@ -1,14 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0a7nvwligf0h"]
+[gd_scene load_steps=4 format=3 uid="uid://c0a7nvwligf0h"]
 
 [ext_resource type="PackedScene" uid="uid://7svj2yejpgxs" path="res://scenes/game_manager.tscn" id="1_lushf"]
-[ext_resource type="PackedScene" uid="uid://vrww3b18dhra" path="res://scenes/loader.tscn" id="2_w87pm"]
 [ext_resource type="Texture2D" uid="uid://beiiqubqirprc" path="res://assets/images/board.jpg" id="3_a46j4"]
 [ext_resource type="PackedScene" uid="uid://e2ik4g2s6uyc" path="res://scenes/region.tscn" id="4_23dc1"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Game_manager" parent="." instance=ExtResource("1_lushf")]
-loader = ExtResource("2_w87pm")
 
 [node name="Board" type="Polygon2D" parent="."]
 color = Color(0.4982671, 0.38971585, 0.19107857, 1)
