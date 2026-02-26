@@ -24,6 +24,6 @@ func _check_all_players_ready():
 		emit_signal("all_players_ready")
 
 func del_player(id: int):
-	print("Player %s left the game!" % id)
-	players.erase(id)
-	emit_signal("player_list_updated")
+	if players.erase(id):
+		print("Player %s left the game!" % id)
+		emit_signal("player_list_updated")
