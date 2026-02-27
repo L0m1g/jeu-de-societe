@@ -41,6 +41,12 @@ func next_turn() -> void:
 	var username = NetworkManager.players[current_player_peer_id]["name"]
 	update_turn_label.rpc(username)
 
+func request_current_turn() -> void:
+	if current_player_peer_id == 0:
+		return
+	var username: String = NetworkManager.players[current_player_peer_id]["name"]
+	emit_signal("turn_changed", username)
+
 @rpc("authority", "call_local", "reliable")
 func _start_game() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_screen.tscn")
