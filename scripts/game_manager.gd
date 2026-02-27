@@ -6,7 +6,7 @@ var current_turn_index: int = 0
 
 # Signals
 signal current_player_changed(username: String)
-signal turn_increased
+signal turn_changed
 
 # Functions
 var _timer: float = 0.0
