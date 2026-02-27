@@ -3,6 +3,7 @@ extends Node
 # Variables
 var current_player_peer_id: int = 0
 var current_turn_index: int = 0
+var max_turn_index: int = 7
 
 # Signals
 signal current_player_changed(username: String)
@@ -16,11 +17,13 @@ func _ready() -> void:
 	NetworkManager.all_players_ready.connect(_on_all_players_ready)
 
 func _process(delta: float) -> void:
-	_timer += delta
-	if _timer >= 0.5:
-		_timer = 0.0
-		current_turn_index += 1
-		_turn_changed.rpc(current_turn_index)
+	if multiplayer.is_server() && current_turn_index < max_turn_index:
+		_timer += delta
+		if _timer >= 5:
+			_timer = 0.0
+			current_turn_index += 1
+			print("Turn changed: %s" % current_turn_index)
+			_turn_changed.rpc(current_turn_index)
 
 func _on_player_list_updated() -> void:
 	print("Player list updated")
