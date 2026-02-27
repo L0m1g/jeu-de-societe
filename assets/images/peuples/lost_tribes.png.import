@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uj6chnyn4xix"
-path="res://.godot/imported/amazones.png-a18e6899c2c54e25a115f4ba25d4ab6c.ctex"
+uid="uid://bams5tmovbol8"
+path="res://.godot/imported/lost_tribes.png-05178cab6ce78d688c45bfdb177f9c2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/amazones.png"
-dest_files=["res://.godot/imported/amazones.png-a18e6899c2c54e25a115f4ba25d4ab6c.ctex"]
+source_file="res://assets/images/peuples/lost_tribes.png"
+dest_files=["res://.godot/imported/lost_tribes.png-05178cab6ce78d688c45bfdb177f9c2a.ctex"]
 
 [params]
 
