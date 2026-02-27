@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0a7nvwligf0h"]
 
-[ext_resource type="Script" uid="uid://nm67meyvoeu4" path="res://scenes/board.gd" id="1_aum10"]
+[ext_resource type="Script" uid="uid://nm67meyvoeu4" path="res://scripts/board.gd" id="1_aum10"]
 [ext_resource type="Texture2D" uid="uid://beiiqubqirprc" path="res://assets/images/board.jpg" id="3_a46j4"]
 [ext_resource type="PackedScene" uid="uid://e2ik4g2s6uyc" path="res://scenes/region.tscn" id="4_23dc1"]
 
@@ -12,7 +12,7 @@ polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
 script = ExtResource("1_aum10")
 
 [node name="Map" type="Sprite2D" parent="Board"]
-position = Vector2(697, 305)
+position = Vector2(697, 298)
 texture = ExtResource("3_a46j4")
 
 [node name="region_1" parent="Board/Map" instance=ExtResource("4_23dc1")]
@@ -40,6 +40,836 @@ polygon = PackedVector2Array(1, 47, 1, 36, 9, 22, 7, 7, 8, 5, 14, 2, 17, -6, 31,
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(1, 47, 1, 36, 9, 22, 7, 7, 8, 5, 14, 2, 17, -6, 31, -23, 31, -28, 45, -37, 44, -42, 55, -46, 66, -33, 70, -33, 74, -29, 95, -29, 106, -24, 107, -23, 110, -5, 113, -2, 119, 0, 121, 3, 132, 8, 127, 16, 125, 27, 128, 33, 146, 47)
 
+[node name="region_3" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_3" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_3/Area2D" index="0"]
+visible = false
+position = Vector2(146, 0)
+polygon = PackedVector2Array(1, 47, -20, 31, -21, 20, -14, 9, -25, 3, -26, -1, -35, -3, -37, -6, -37, -11, -39, -23, -26, -30, -30, -37, 41, -35, 46, -26, 58, -22, 94, -26, 105, -23, 111, -18, 122, -13, 160, -8, 168, -1, 172, 9, 180, 17, 182, 26, 174, 32, 171, 37, 171, 47)
+
+[node name="Polygon2D" parent="Board/Map/region_3/Area2D" index="1"]
+position = Vector2(146, 0)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1, 47, -20, 31, -21, 20, -14, 9, -25, 3, -26, -1, -35, -3, -37, -6, -37, -11, -39, -23, -26, -30, -30, -37, 41, -35, 46, -26, 58, -22, 94, -26, 105, -23, 111, -18, 122, -13, 160, -8, 168, -1, 172, 9, 180, 17, 182, 26, 174, 32, 171, 37, 171, 47)
+
+[node name="region_4" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_4" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_4/Area2D" index="0"]
+visible = false
+position = Vector2(316, 0)
+polygon = PackedVector2Array(1, 47, 1, 38, 3, 33, 10, 28, 12, 25, 12, 21, 11, 18, 3, 10, -2, -1, -5, -4, 2, -11, 29, -27, 38, -35, 53, -30, 67, -19, 68, -15, 92, -1, 93, 8, 97, 14, 108, 19, 117, 22, 134, 29, 138, 33, 140, 35, 140, 38, 138, 39, 122, 47)
+
+[node name="Polygon2D" parent="Board/Map/region_4/Area2D" index="1"]
+position = Vector2(316, 0)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1, 47, 1, 38, 3, 33, 10, 28, 12, 25, 12, 21, 11, 18, 3, 10, -2, -1, -5, -4, 2, -11, 29, -27, 38, -35, 53, -30, 67, -19, 68, -15, 92, -1, 93, 8, 97, 14, 108, 19, 117, 22, 134, 29, 138, 33, 140, 35, 140, 38, 138, 39, 122, 47)
+
+[node name="region_5" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_5" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_5/Area2D" index="0"]
+visible = false
+position = Vector2(438, 0)
+polygon = PackedVector2Array(1, 47, 18, 38, 18, 34, 10, 27, -2, 22, -22, 16, -29, 10, -30, 0, -45, -10, -29, -17, -16, -30, -4, -31, 2, -37, 8, -41, 11, -47, 13, -59, 43, -60, 56, -56, 63, -48, 65, -38, 70, -29, 97, -28, 106, -26, 113, -22, 120, -19, 159, -11, 162, -10, 162, -8, 159, -7, 147, -6, 143, -4, 136, -3, 123, 5, 122, 12, 119, 16, 107, 22, 107, 28, 102, 34, 100, 47)
+
+[node name="Polygon2D" parent="Board/Map/region_5/Area2D" index="1"]
+position = Vector2(438, 0)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1, 47, 18, 38, 18, 34, 10, 27, -2, 22, -22, 16, -29, 10, -30, 0, -45, -10, -29, -17, -16, -30, -4, -31, 2, -37, 8, -41, 11, -47, 13, -59, 43, -60, 56, -56, 63, -48, 65, -38, 70, -29, 97, -28, 106, -26, 113, -22, 120, -19, 159, -11, 162, -10, 162, -8, 159, -7, 147, -6, 143, -4, 136, -3, 123, 5, 122, 12, 119, 16, 107, 22, 107, 28, 102, 34, 100, 47)
+
+[node name="region_6" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_6" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_6/Area2D" index="0"]
+visible = false
+position = Vector2(-125, -46)
+polygon = PackedVector2Array(0, 46, 1, 8, 22, 7, 31, 2, 43, -12, 54, -18, 59, -18, 63, -22, 68, -24, 73, -31, 79, -33, 88, -34, 97, -29, 105, -24, 113, -22, 133, -15, 143, -16, 151, -23, 156, -25, 159, -29, 163, -34, 172, -36, 174, -40, 181, -45, 188, -47, 192, -48, 194, -50, 198, -50, 199, -45, 207, -30, 209, -30, 209, -20, 206, -17, 201, -16, 198, -15, 195, -10, 190, -9, 185, -8, 183, -2, 179, 0, 169, 4, 170, 8, 165, 12, 158, 15, 156, 17, 156, 22, 141, 41, 132, 41, 112, 30, 106, 30, 98, 32, 84, 32, 76, 36, 66, 42, 57, 42, 53.29006, 42.084316, 46, 40, 34, 40, 26, 43, 13, 43)
+
+[node name="Polygon2D" parent="Board/Map/region_6/Area2D" index="1"]
+position = Vector2(-125, -46)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(0, 46, 1, 8, 22, 7, 31, 2, 43, -12, 54, -18, 59, -18, 63, -22, 68, -24, 73, -31, 79, -33, 88, -34, 97, -29, 105, -24, 113, -22, 133, -15, 143, -16, 151, -23, 156, -25, 159, -29, 163, -34, 172, -36, 174, -40, 181, -45, 188, -47, 192, -48, 194, -50, 198, -50, 199, -45, 207, -30, 209, -30, 209, -20, 206, -17, 201, -16, 198, -15, 195, -10, 190, -9, 185, -8, 183, -2, 179, 0, 169, 4, 170, 8, 165, 12, 158, 15, 156, 17, 156, 22, 141, 41, 132, 41, 112, 30, 106, 30, 98, 32, 84, 32, 76, 36, 66, 42, 57, 42, 53.29006, 42.084316, 46, 40, 34, 40, 26, 43, 13, 43)
+
+[node name="region_7" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_7" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_7/Area2D" index="0"]
+visible = false
+position = Vector2(55, -92)
+polygon = PackedVector2Array(-1, 46, 3, 44, 5, 38, 15, 36, 18, 31, 21, 30, 26, 29, 29, 26, 29, 16, 30, 16, 35, 3, 43, 22, 48, 16, 54, 0, 59, 8, 68, 6, 76, -7, 82, 0, 89, -7, 91, -13, 94, -10, 102, 9, 106, 9, 109, 16, 112, 16, 115, 25, 120, 25, 122, 30, 129, 42, 131, 49, 134, 53, 132, 57, 61, 55, 65, 62, 52, 69, 47, 65, 42, 64, 40, 63, 20, 63, 17, 62, 15, 59, 10, 58)
+
+[node name="Polygon2D" parent="Board/Map/region_7/Area2D" index="1"]
+position = Vector2(55, -92)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-1, 46, 3, 44, 5, 38, 15, 36, 18, 31, 21, 30, 26, 29, 29, 26, 29, 16, 30, 16, 35, 3, 43, 22, 48, 16, 54, 0, 59, 8, 68, 6, 76, -7, 82, 0, 89, -7, 91, -13, 94, -10, 102, 9, 106, 9, 109, 16, 112, 16, 115, 25, 120, 25, 122, 30, 129, 42, 131, 49, 134, 53, 132, 57, 61, 55, 65, 62, 52, 69, 47, 65, 42, 64, 40, 63, 20, 63, 17, 62, 15, 59, 10, 58)
+
+[node name="region_8" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_8" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_8/Area2D" index="0"]
+visible = false
+position = Vector2(189, -74)
+polygon = PackedVector2Array(3, 48, -2, 39, 0, 36, -3, 31, -5, 24, -12, 12, -14, 7, -11, 3, -10, -4, -5, -8, 4, -8, 7, -13, 23, -12, 32, -16, 41, -15, 47, -13, 51, -9, 58, -4, 60, 2, 62, 4, 61, 8, 57, 11, 51, 14, 47, 18, 45, 23, 48, 28, 54, 33, 54, 38, 51, 43, 51, 48, 15, 52)
+
+[node name="Polygon2D" parent="Board/Map/region_8/Area2D" index="1"]
+position = Vector2(189, -74)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(3, 48, -2, 39, 0, 36, -3, 31, -5, 24, -12, 12, -14, 7, -11, 3, -10, -4, -5, -8, 4, -8, 7, -13, 23, -12, 32, -16, 41, -15, 47, -13, 51, -9, 58, -4, 60, 2, 62, 4, 61, 8, 57, 11, 51, 14, 47, 18, 45, 23, 48, 28, 54, 33, 54, 38, 51, 43, 51, 48, 15, 52)
+
+[node name="region_9" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_9/Area2D" index="0"]
+visible = false
+position = Vector2(364, -62)
+polygon = PackedVector2Array(1, 31, 4, 26, 4, 21, -2, 16, -5, 11, -3, 6, 1, 2, 7, -1, 11, -4, 12, -8, 15, -8, 17, -6, 21, -6, 24, -7, 31, -7, 42, -4, 49, -6, 55, -8, 68, -8, 71, -7, 79, -3, 88, 4, 95, 7, 98, 9, 104, 13, 112, 20, 115, 27, 106, 35, 79, 51, 72, 58, 67, 54, 29, 49, 18, 44, 12, 39, 1, 36)
+
+[node name="Polygon2D" parent="Board/Map/region_9/Area2D" index="1"]
+position = Vector2(364, -62)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1, 31, 4, 26, 4, 21, -2, 16, -5, 11, -3, 6, 1, 2, 7, -1, 11, -4, 12, -8, 15, -8, 17, -6, 21, -6, 24, -7, 31, -7, 42, -4, 49, -6, 55, -8, 68, -8, 71, -7, 79, -3, 88, 4, 95, 7, 98, 9, 104, 13, 112, 20, 115, 27, 106, 35, 79, 51, 72, 58, 67, 54, 29, 49, 18, 44, 12, 39, 1, 36)
+
+[node name="region_10" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_10" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_10/Area2D" index="0"]
+visible = false
+position = Vector2(311, -116)
+polygon = PackedVector2Array(-4, 46, -5, 42, -3, 39, 2, 37, 3, 34, 6, 30, 17, 24, 25, 23, 30, 26, 34, 26, 37, 23, 41, 16, 41, 12, 43, 9, 49, 6, 68, 5, 73, 4, 75, 6, 84, 12, 85, 17, 91, 23, 98, 27, 113, 28, 118, 30, 118, 51, 127, 51, 138, 54, 140, 57, 138, 69, 135, 75, 129, 79, 123, 85, 111, 86, 98, 99, 82, 106, 73, 101, 72, 97, 58, 86, 43, 81, 40, 74, 32, 67, 26, 63, 23, 61, 16, 58, 7, 51)
+
+[node name="Polygon2D" parent="Board/Map/region_10/Area2D" index="1"]
+position = Vector2(311, -116)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-4, 46, -5, 42, -3, 39, 2, 37, 3, 34, 6, 30, 17, 24, 25, 23, 30, 26, 34, 26, 37, 23, 41, 16, 41, 12, 43, 9, 49, 6, 68, 5, 73, 4, 75, 6, 84, 12, 85, 17, 91, 23, 98, 27, 113, 28, 118, 30, 118, 51, 127, 51, 138, 54, 140, 57, 138, 69, 135, 75, 129, 79, 123, 85, 111, 86, 98, 99, 82, 106, 73, 101, 72, 97, 58, 86, 43, 81, 40, 74, 32, 67, 26, 63, 23, 61, 16, 58, 7, 51)
+
+[node name="region_11" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_11" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_11/Area2D" index="0"]
+visible = false
+position = Vector2(393, -125)
+polygon = PackedVector2Array(31, 37, 16, 36, 9, 32, 3, 26, 2, 21, -7, 15, -9, 13, -4, 11, -2, 8, -2, 3, -3, -4, 2, -9, 8, -14, 20, -19, 35, -21, 39, -26, 40, -31, 51, -35, 60, -35, 67, -33, 81, -26, 87, -21, 95, -19, 103, -15, 107, -8, 111, 3, 117, 11, 124, 14, 127, 20, 127, 25, 124, 31, 118, 34, 110, 38, 100, 44, 97, 50, 95, 57, 88, 65, 58, 66, 56, 63, 45, 60, 36, 60, 36, 39)
+
+[node name="Polygon2D" parent="Board/Map/region_11/Area2D" index="1"]
+position = Vector2(393, -125)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(31, 37, 16, 36, 9, 32, 3, 26, 2, 21, -7, 15, -9, 13, -4, 11, -2, 8, -2, 3, -3, -4, 2, -9, 8, -14, 20, -19, 35, -21, 39, -26, 40, -31, 51, -35, 60, -35, 67, -33, 81, -26, 87, -21, 95, -19, 103, -15, 107, -8, 111, 3, 117, 11, 124, 14, 127, 20, 127, 25, 124, 31, 118, 34, 110, 38, 100, 44, 97, 50, 95, 57, 88, 65, 58, 66, 56, 63, 45, 60, 36, 60, 36, 39)
+
+[node name="region_12" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_12" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_12/Area2D" index="0"]
+visible = false
+position = Vector2(480, -74)
+polygon = PackedVector2Array(28, 45, 23, 36, 21, 26, 14, 18, 1, 14, 8, 6, 10, -1, 13, -7, 23, -13, 31, -17, 37, -20, 40, -26, 40, -31, 51, -38, 57, -40, 76, -41, 85, -40, 95, -37, 104, -34, 117, -30, 128, -26, 112, -21, 112, -18, 124, -14, 129, -11, 133, -5, 134, 0, 134, 16, 135, 22, 136, 29, 140, 36, 142, 43, 142, 52, 135, 58, 126, 63, 120, 64, 78, 55, 71, 52, 64, 48, 55, 46)
+
+[node name="Polygon2D" parent="Board/Map/region_12/Area2D" index="1"]
+position = Vector2(480, -74)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(28, 45, 23, 36, 21, 26, 14, 18, 1, 14, 8, 6, 10, -1, 13, -7, 23, -13, 31, -17, 37, -20, 40, -26, 40, -31, 51, -38, 57, -40, 76, -41, 85, -40, 95, -37, 104, -34, 117, -30, 128, -26, 112, -21, 112, -18, 124, -14, 129, -11, 133, -5, 134, 0, 134, 16, 135, 22, 136, 29, 140, 36, 142, 43, 142, 52, 135, 58, 126, 63, 120, 64, 78, 55, 71, 52, 64, 48, 55, 46)
+
+[node name="region_13" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_13" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_13/Area2D" index="0"]
+visible = false
+position = Vector2(572, -141)
+polygon = PackedVector2Array(36, 41, 12, 33, -7, 27, -16, 26, -16, 18, -4, 10, 4, 4, 5, -20, 21, -23, 28, -28, 31, -30, 39, -30, 43, -33, 61, -33, 69, -34, 94, -35, 94, 40, 92, 40, 89, 38, 84, 38, 82, 40, 78, 42, 69, 42, 63, 39, 58, 39, 53, 36, 48, 36, 43, 37)
+
+[node name="Polygon2D" parent="Board/Map/region_13/Area2D" index="1"]
+position = Vector2(572, -141)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(36, 41, 12, 33, -7, 27, -16, 26, -16, 18, -4, 10, 4, 4, 5, -20, 21, -23, 28, -28, 31, -30, 39, -30, 43, -33, 61, -33, 69, -34, 94, -35, 94, 40, 92, 40, 89, 38, 84, 38, 82, 40, 78, 42, 69, 42, 63, 39, 58, 39, 53, 36, 48, 36, 43, 37)
+
+[node name="region_14" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_14" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_14/Area2D" index="0"]
+visible = false
+position = Vector2(230, -115)
+polygon = PackedVector2Array(6, 28, 17, 27, 26, 22, 33, 17, 33, 14, 27, 6, 21, -2, 9, -12, 9, -19, 13, -24, 12, -30, 15, -34, 19, -37, 27, -41, 31, -45, 32, -50, 37, -47, 41, -45, 44, -47, 49, -46, 52, -44, 57, -40, 71, -36, 73, -28, 72, -24, 69, -22, 70, -16, 73, -12, 82, -8, 85, -7, 86, -2, 84, 1, 87, 5, 100, 7, 114, 12, 114, 15, 113, 18, 110, 20, 111, 25, 106, 22, 98, 23, 87, 29, 84, 33, 83, 36, 78, 38, 76, 41, 77, 45, 64, 45, 51, 49, 40, 46, 33, 46, 30, 47, 26, 47, 24, 45, 21, 45, 19, 43, 17, 37, 10, 32)
+
+[node name="Polygon2D" parent="Board/Map/region_14/Area2D" index="1"]
+position = Vector2(230, -115)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(6, 28, 17, 27, 26, 22, 33, 17, 33, 14, 27, 6, 21, -2, 9, -12, 9, -19, 13, -24, 12, -30, 15, -34, 19, -37, 27, -41, 31, -45, 32, -50, 37, -47, 41, -45, 44, -47, 49, -46, 52, -44, 57, -40, 71, -36, 73, -28, 72, -24, 69, -22, 70, -16, 73, -12, 82, -8, 85, -7, 86, -2, 84, 1, 87, 5, 100, 7, 114, 12, 114, 15, 113, 18, 110, 20, 111, 25, 106, 22, 98, 23, 87, 29, 84, 33, 83, 36, 78, 38, 76, 41, 77, 45, 64, 45, 51, 49, 40, 46, 33, 46, 30, 47, 26, 47, 24, 45, 21, 45, 19, 43, 17, 37, 10, 32)
+
+[node name="region_15" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_15" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_15/Area2D" index="0"]
+visible = false
+position = Vector2(-142, -105)
+polygon = PackedVector2Array(18, 67, 18, -39, 30, -39, 38, -37, 45, -37, 56, -28, 66, -29, 76, -28, 81, -28, 93, -31, 104, -31, 108, -26, 113, -26, 116, -23, 120, -24, 127, -17, 128, -12, 131, -11, 136, -9, 137, -6, 135, -4, 130, -2, 124, -1, 129, 1, 132, 4, 131, 7, 129, 8, 125, 11, 125, 17, 123, 19, 118, 21, 114, 23, 106, 23, 105, 25, 96, 26, 90, 28, 85, 35, 80, 37, 76, 41, 71, 41, 60, 47, 48, 61, 39, 66)
+
+[node name="Polygon2D" parent="Board/Map/region_15/Area2D" index="1"]
+position = Vector2(-142, -105)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(18, 67, 18, -39, 30, -39, 38, -37, 45, -37, 56, -28, 66, -29, 76, -28, 81, -28, 93, -31, 104, -31, 108, -26, 113, -26, 116, -23, 120, -24, 127, -17, 128, -12, 131, -11, 136, -9, 137, -6, 135, -4, 130, -2, 124, -1, 129, 1, 132, 4, 131, 7, 129, 8, 125, 11, 125, 17, 123, 19, 118, 21, 114, 23, 106, 23, 105, 25, 96, 26, 90, 28, 85, 35, 80, 37, 76, 41, 71, 41, 60, 47, 48, 61, 39, 66)
+
+[node name="region_16" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_16" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_16/Area2D" index="0"]
+visible = false
+position = Vector2(-38, -110)
+polygon = PackedVector2Array(1, 30, 2, 28, 10, 28, 14, 26, 19, 24, 21, 22, 21, 16, 25, 13, 27, 12, 28, 9, 25, 6, 20, 4, 26, 3, 31, 1, 33, -1, 32, -4, 24, -7, 23, -12, 26, -13, 29, -15, 35, -16, 40, -18, 48, -20, 52, -20, 55, -22, 58, -27, 59, -30, 63, -29, 69, -26, 75, -22, 83, -22, 90, -22, 98, -20, 102, -18, 107, -16, 109, -14, 127, -15, 125, -10, 113, -6, 111, -2, 111, 14, 107, 14, 105, 16, 94, 19, 87, 24, 85, 28, 76, 30, 69, 39, 64, 41, 56, 48, 46, 49, 26, 42, 18, 40, 10, 35)
+
+[node name="Polygon2D" parent="Board/Map/region_16/Area2D" index="1"]
+position = Vector2(-38, -110)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1, 30, 2, 28, 10, 28, 14, 26, 19, 24, 21, 22, 21, 16, 25, 13, 27, 12, 28, 9, 25, 6, 20, 4, 26, 3, 31, 1, 33, -1, 32, -4, 24, -7, 23, -12, 26, -13, 29, -15, 35, -16, 40, -18, 48, -20, 52, -20, 55, -22, 58, -27, 59, -30, 63, -29, 69, -26, 75, -22, 83, -22, 90, -22, 98, -20, 102, -18, 107, -16, 109, -14, 127, -15, 125, -10, 113, -6, 111, -2, 111, 14, 107, 14, 105, 16, 94, 19, 87, 24, 85, 28, 76, 30, 69, 39, 64, 41, 56, 48, 46, 49, 26, 42, 18, 40, 10, 35)
+
+[node name="region_17" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_17/Area2D" index="0"]
+visible = false
+position = Vector2(681, -437)
+polygon = PackedVector2Array(22, -2, 30, -13, 33, -14, 39, -15, 43, -20, 46, -28, 45, -34, 47, -36, 51, -38, 56, -40, 110, -40, 110, 39, 80, 41, 75, 43, 65, 46, 23, 49, 19, 47, 10, 47, 4, 45, 5, 43, 4, 41, 3, 39, 5, 37, 7, 35, 9, 33, 8, 30, 8, 23, 17, 19, 15, 16, 10, 14, 8, 11, 12, 8, 14, 4)
+
+[node name="Polygon2D" parent="Board/Map/region_17/Area2D" index="1"]
+position = Vector2(681, -437)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(22, -2, 30, -13, 33, -14, 39, -15, 43, -20, 46, -28, 45, -34, 47, -36, 51, -38, 56, -40, 110, -40, 110, 39, 80, 41, 75, 43, 65, 46, 23, 49, 19, 47, 10, 47, 4, 45, 5, 43, 4, 41, 3, 39, 5, 37, 7, 35, 9, 33, 8, 30, 8, 23, 17, 19, 15, 16, 10, 14, 8, 11, 12, 8, 14, 4)
+
+[node name="region_18" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_18" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_18/Area2D" index="0"]
+visible = false
+position = Vector2(293, -160)
+polygon = PackedVector2Array(19, 37, 10, 33, 7, 29, 6, 23, 9, 21, 10, 17, 8, 9, 9, 6, 13, 5, 16, 0, 23, -7, 34, -21, 41, -25, 46, -32, 52, -33, 56, -38, 75, -36, 83, -35, 86, -26, 94, -23, 105, -22, 111, -18, 111, -14, 112, -8, 118, -4, 123, -2, 128, -1, 130, 0, 133, 0, 136, 2, 140, 4, 139, 9, 135, 14, 120, 16, 108, 21, 102, 26, 97, 31, 98, 38, 98, 43, 96, 46, 91, 48, 87, 49, 67, 50, 61, 53, 59, 56, 59, 60, 55, 67, 52, 70, 48, 70, 47, 65, 50, 63, 51, 60, 51, 57, 37, 52, 24, 50, 21, 46, 23, 43, 22, 38)
+
+[node name="Polygon2D" parent="Board/Map/region_18/Area2D" index="1"]
+position = Vector2(293, -160)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(19, 37, 10, 33, 7, 29, 6, 23, 9, 21, 10, 17, 8, 9, 9, 6, 13, 5, 16, 0, 23, -7, 34, -21, 41, -25, 46, -32, 52, -33, 56, -38, 75, -36, 83, -35, 86, -26, 94, -23, 105, -22, 111, -18, 111, -14, 112, -8, 118, -4, 123, -2, 128, -1, 130, 0, 133, 0, 136, 2, 140, 4, 139, 9, 135, 14, 120, 16, 108, 21, 102, 26, 97, 31, 98, 38, 98, 43, 96, 46, 91, 48, 87, 49, 67, 50, 61, 53, 59, 56, 59, 60, 55, 67, 52, 70, 48, 70, 47, 65, 50, 63, 51, 60, 51, 57, 37, 52, 24, 50, 21, 46, 23, 43, 22, 38)
+
+[node name="region_19" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_19" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_19/Area2D" index="0"]
+visible = false
+position = Vector2(234, -199)
+polygon = PackedVector2Array(26, 30, 22, 27, 18, 26, 16, 25, 16, 21, 13, 19, 14, 16, 15, 14, 12, 12, 12, 10, 12, 8, 14, 8, 16, 5, 18, 3, 20, -2, 24, -7, 28, -10, 35, -12, 42, -14, 48, -15, 52, -12, 56, -12, 60, -15, 64, -18, 67, -20, 73, -22, 77, -17, 86, -15, 92, -12, 99, -11, 104, -5, 108, -3, 113, 0, 115, 1, 111, 6, 105, 7, 100, 14, 93, 18, 82, 32, 75, 39, 72, 44, 68, 45, 67, 48, 53, 44, 45, 38, 40, 37, 37, 39, 33, 37, 28, 34)
+
+[node name="Polygon2D" parent="Board/Map/region_19/Area2D" index="1"]
+position = Vector2(234, -199)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(26, 30, 22, 27, 18, 26, 16, 25, 16, 21, 13, 19, 14, 16, 15, 14, 12, 12, 12, 10, 12, 8, 14, 8, 16, 5, 18, 3, 20, -2, 24, -7, 28, -10, 35, -12, 42, -14, 48, -15, 52, -12, 56, -12, 60, -15, 64, -18, 67, -20, 73, -22, 77, -17, 86, -15, 92, -12, 99, -11, 104, -5, 108, -3, 113, 0, 115, 1, 111, 6, 105, 7, 100, 14, 93, 18, 82, 32, 75, 39, 72, 44, 68, 45, 67, 48, 53, 44, 45, 38, 40, 37, 37, 39, 33, 37, 28, 34)
+
+[node name="region_20" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_20" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_20/Area2D" index="0"]
+visible = false
+position = Vector2(17, -176)
+polygon = PackedVector2Array(4, 36, 4, 30, 3, 27, 0, 24, 3, 17, 4, 10, 6, 6, 10, 3, 10, 0, 8, -3, 9, -7, 15, -7, 19, -5, 28, -7, 35, -10, 41, -14, 43, -20, 44, -26, 49, -29, 54, -35, 62, -34, 70, -33, 73, -32, 83, -30, 93, -25, 100, -18, 100, -13, 105, -7, 105, -3, 102, 2, 95, 6, 89, 9, 89, 12, 87, 14, 84, 19, 84, 24, 86, 28, 87, 35, 85, 42, 82, 47, 77, 50, 72, 51, 54, 52, 52, 50, 47, 48, 43, 46, 35, 44, 28, 44, 20, 44, 14, 40, 8, 37)
+
+[node name="Polygon2D" parent="Board/Map/region_20/Area2D" index="1"]
+position = Vector2(17, -176)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(4, 36, 4, 30, 3, 27, 0, 24, 3, 17, 4, 10, 6, 6, 10, 3, 10, 0, 8, -3, 9, -7, 15, -7, 19, -5, 28, -7, 35, -10, 41, -14, 43, -20, 44, -26, 49, -29, 54, -35, 62, -34, 70, -33, 73, -32, 83, -30, 93, -25, 100, -18, 100, -13, 105, -7, 105, -3, 102, 2, 95, 6, 89, 9, 89, 12, 87, 14, 84, 19, 84, 24, 86, 28, 87, 35, 85, 42, 82, 47, 77, 50, 72, 51, 54, 52, 52, 50, 47, 48, 43, 46, 35, 44, 28, 44, 20, 44, 14, 40, 8, 37)
+
+[node name="region_21" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_21" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_21/Area2D" index="0"]
+visible = false
+position = Vector2(-111, -176)
+polygon = PackedVector2Array(-13, 32, -13, -10, -1, -11, 16, -11, 32, -11, 51, -11, 71, -14, 82, -18, 97, -24, 109, -25, 116, -27, 127, -19, 135, -11, 137, -7, 136, -3, 138, 0, 138, 3, 134, 6, 132, 10, 131, 17, 128, 24, 131, 27, 132, 30, 132, 36, 131, 39, 128, 44, 125, 46, 121, 46, 113, 48, 108, 50, 102, 51, 99, 53, 96, 54, 89, 47, 85, 48, 82, 45, 77, 45, 73, 40, 62, 40, 50, 43, 45, 43, 35, 42, 25, 43, 14, 34, 7, 34, -1, 32)
+
+[node name="Polygon2D" parent="Board/Map/region_21/Area2D" index="1"]
+position = Vector2(-111, -176)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-13, 32, -13, -10, -1, -11, 16, -11, 32, -11, 51, -11, 71, -14, 82, -18, 97, -24, 109, -25, 116, -27, 127, -19, 135, -11, 137, -7, 136, -3, 138, 0, 138, 3, 134, 6, 132, 10, 131, 17, 128, 24, 131, 27, 132, 30, 132, 36, 131, 39, 128, 44, 125, 46, 121, 46, 113, 48, 108, 50, 102, 51, 99, 53, 96, 54, 89, 47, 85, 48, 82, 45, 77, 45, 73, 40, 62, 40, 50, 43, 45, 43, 35, 42, 25, 43, 14, 34, 7, 34, -1, 32)
+
+[node name="region_22" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_22" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_22/Area2D" index="0"]
+visible = false
+position = Vector2(456, -164)
+polygon = PackedVector2Array(64, 59, 61, 53, 54, 50, 48, 42, 44, 31, 40, 24, 32, 20, 24, 18, 18, 13, 6, 7, 4, 6, -3, 4, -12, 4, -23, 8, -27, 6, -30, 4, -33, 4, -35, 3, -40, 2, -45, 0, -51, -4, -52, -10, -52, -14, -45, -16, -42, -15, -37, -12, -30, -11, -16, -17, -12, -19, -4, -19, 7, -22, 11, -24, 13, -30, 15, -30, 17, -29, 20, -22, 36, -22, 42, -15, 71, -19, 83, -19, 86, -20, 91, -20, 95, -18, 95, -14, 105, -14, 105, -10, 108, -9, 116, -8, 121, 3, 120, 27, 112, 33, 100, 41, 100, 49, 80, 50, 75, 52)
+
+[node name="Polygon2D" parent="Board/Map/region_22/Area2D" index="1"]
+position = Vector2(456, -164)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(64, 59, 61, 53, 54, 50, 48, 42, 44, 31, 40, 24, 32, 20, 24, 18, 18, 13, 6, 7, 4, 6, -3, 4, -12, 4, -23, 8, -27, 6, -30, 4, -33, 4, -35, 3, -40, 2, -45, 0, -51, -4, -52, -10, -52, -14, -45, -16, -42, -15, -37, -12, -30, -11, -16, -17, -12, -19, -4, -19, 7, -22, 11, -24, 13, -30, 15, -30, 17, -29, 20, -22, 36, -22, 42, -15, 71, -19, 83, -19, 86, -20, 91, -20, 95, -18, 95, -14, 105, -14, 105, -10, 108, -9, 116, -8, 121, 3, 120, 27, 112, 33, 100, 41, 100, 49, 80, 50, 75, 52)
+
+[node name="region_23" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_23" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_23/Area2D" index="0"]
+visible = false
+position = Vector2(-129, -227)
+polygon = PackedVector2Array(5, 41, 5, -12, 14, -9, 20, -9, 27, -11, 39, -10, 41, -14, 48, -17, 60, -11, 64, -11, 75, -15, 80, -14, 86, -8, 90, -6, 95, -4, 98, 0, 102, 0, 104, -2, 108, -1, 110, 2, 111, 4, 114, 4, 115, 5, 115, 16, 115, 27, 100, 33, 89, 37, 69, 40, 50, 40, 34, 40, 17, 40)
+
+[node name="Polygon2D" parent="Board/Map/region_23/Area2D" index="1"]
+position = Vector2(-129, -227)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(5, 41, 5, -12, 14, -9, 20, -9, 27, -11, 39, -10, 41, -14, 48, -17, 60, -11, 64, -11, 75, -15, 80, -14, 86, -8, 90, -6, 95, -4, 98, 0, 102, 0, 104, -2, 108, -1, 110, 2, 111, 4, 114, 4, 115, 5, 115, 16, 115, 27, 100, 33, 89, 37, 69, 40, 50, 40, 34, 40, 17, 40)
+
+[node name="region_24" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_24" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_24/Area2D" index="0"]
+visible = false
+position = Vector2(-37, -230)
+polygon = PackedVector2Array(35, 29, 23, 30, 23, 8, 23, 6, 26, 0, 27, -7, 40, -14, 52, -16, 60, -15, 65, -14, 69, -13, 77, -12, 83, -8, 87, -6, 91, -8, 93, -6, 97, -6, 103, -5, 104, -1, 106, 1, 111, 1, 114, -2, 117, -2, 119, -1, 122, -2, 127, 1, 129, 8, 125, 13, 117, 16, 108, 19, 103, 25, 98, 28, 97, 34, 95, 40, 89, 44, 82, 47, 73, 49, 69, 47, 63, 47, 61, 43, 53, 35, 42, 27)
+
+[node name="Polygon2D" parent="Board/Map/region_24/Area2D" index="1"]
+position = Vector2(-37, -230)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(35, 29, 23, 30, 23, 8, 23, 6, 26, 0, 27, -7, 40, -14, 52, -16, 60, -15, 65, -14, 69, -13, 77, -12, 83, -8, 87, -6, 91, -8, 93, -6, 97, -6, 103, -5, 104, -1, 106, 1, 111, 1, 114, -2, 117, -2, 119, -1, 122, -2, 127, 1, 129, 8, 125, 13, 117, 16, 108, 19, 103, 25, 98, 28, 97, 34, 95, 40, 89, 44, 82, 47, 73, 49, 69, 47, 63, 47, 61, 43, 53, 35, 42, 27)
+
+[node name="region_25" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_25/Area2D" index="0"]
+visible = false
+position = Vector2(300, -237)
+polygon = PackedVector2Array(15, 8, 5, 0, 3, -2, 4, -4, 15, -15, 15, -17, 14, -21, 14, -24, 15, -27, 16, -30, 18, -33, 29, -37, 40, -36, 48, -34, 52, -21, 55, -17, 60, -15, 73, -12, 80, -4, 86, 0, 100, 0, 118, -5, 125, -2, 127, 1, 130, 5, 130, 9, 132, 11, 132, 16, 126, 18, 119, 23, 115, 26, 111, 26, 107, 23, 101, 24, 94, 26, 87, 28, 83, 31, 79, 36, 77, 41, 75, 43, 73, 46, 71, 46, 71, 50, 74, 52, 73, 54, 72, 57, 63, 58, 56, 57, 50, 55, 46, 50, 41, 47, 39, 43, 30, 42, 31, 35, 28, 34, 18, 31, 15, 28, 13, 22, 15, 19, 16, 13)
+
+[node name="Polygon2D" parent="Board/Map/region_25/Area2D" index="1"]
+position = Vector2(300, -237)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(15, 8, 5, 0, 3, -2, 4, -4, 15, -15, 15, -17, 14, -21, 14, -24, 15, -27, 16, -30, 18, -33, 29, -37, 40, -36, 48, -34, 52, -21, 55, -17, 60, -15, 73, -12, 80, -4, 86, 0, 100, 0, 118, -5, 125, -2, 127, 1, 130, 5, 130, 9, 132, 11, 132, 16, 126, 18, 119, 23, 115, 26, 111, 26, 107, 23, 101, 24, 94, 26, 87, 28, 83, 31, 79, 36, 77, 41, 75, 43, 73, 46, 71, 46, 71, 50, 74, 52, 73, 54, 72, 57, 63, 58, 56, 57, 50, 55, 46, 50, 41, 47, 39, 43, 30, 42, 31, 35, 28, 34, 18, 31, 15, 28, 13, 22, 15, 19, 16, 13)
+
+[node name="region_26" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_26" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_26/Area2D" index="0"]
+visible = false
+position = Vector2(84, -246)
+polygon = PackedVector2Array(33, 52, 26, 45, 16, 40, 6, 38, 3, 37, -5, 36, -13, 35, -4, 32, 4, 29, 8, 24, 6, 17, 7, 15, 11, 14, 10, 9, 10, 3, 13, -2, 18, -4, 29, -5, 36, -10, 35, -15, 46, -17, 48, -19, 44, -25, 45, -30, 44, -35, 42, -39, 43, -41, 54, -40, 59, -39, 63, -37, 70, -36, 80, -35, 87, -33, 96, -30, 104, -26, 109, -24, 107, -21, 105, -15, 105, -12, 106, -8, 106, -6, 95, 5, 94, 7, 96, 9, 106, 17, 107, 22, 106, 28, 104, 31, 80, 33, 64, 35, 55, 39, 50, 43, 41, 44)
+
+[node name="Polygon2D" parent="Board/Map/region_26/Area2D" index="1"]
+position = Vector2(84, -246)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(33, 52, 26, 45, 16, 40, 6, 38, 3, 37, -5, 36, -13, 35, -4, 32, 4, 29, 8, 24, 6, 17, 7, 15, 11, 14, 10, 9, 10, 3, 13, -2, 18, -4, 29, -5, 36, -10, 35, -15, 46, -17, 48, -19, 44, -25, 45, -30, 44, -35, 42, -39, 43, -41, 54, -40, 59, -39, 63, -37, 70, -36, 80, -35, 87, -33, 96, -30, 104, -26, 109, -24, 107, -21, 105, -15, 105, -12, 106, -8, 106, -6, 95, 5, 94, 7, 96, 9, 106, 17, 107, 22, 106, 28, 104, 31, 80, 33, 64, 35, 55, 39, 50, 43, 41, 44)
+
+[node name="region_27" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_27" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_27/Area2D" index="0"]
+visible = false
+position = Vector2(-62, -265)
+polygon = PackedVector2Array(-3, 27, -6, 27, 6, 17, 7, 12, 11, 9, 10, 1, 12, -3, 12, -8, 13, -11, 27, -25, 44, -27, 50, -20, 60, -19, 61, -14, 67, -10, 67, -6, 70, -5, 76, -5, 77, -10, 85, -13, 105, -15, 108, -13, 116, -13, 111, -6, 110, -1, 109, 1, 106, 6, 100, 6, 97, 11, 94, 22, 85, 20, 77, 19, 65, 21, 52, 28, 51, 35, 48, 41, 48, 43, 47, 42, 44, 42, 43, 40, 41, 37, 37, 36, 35, 38, 31, 38, 28, 34, 23, 32, 19, 30, 13, 24, 8, 23)
+
+[node name="Polygon2D" parent="Board/Map/region_27/Area2D" index="1"]
+position = Vector2(-62, -265)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-3, 27, -6, 27, 6, 17, 7, 12, 11, 9, 10, 1, 12, -3, 12, -8, 13, -11, 27, -25, 44, -27, 50, -20, 60, -19, 61, -14, 67, -10, 67, -6, 70, -5, 76, -5, 77, -10, 85, -13, 105, -15, 108, -13, 116, -13, 111, -6, 110, -1, 109, 1, 106, 6, 100, 6, 97, 11, 94, 22, 85, 20, 77, 19, 65, 21, 52, 28, 51, 35, 48, 41, 48, 43, 47, 42, 44, 42, 43, 40, 41, 37, 37, 36, 35, 38, 31, 38, 28, 34, 23, 32, 19, 30, 13, 24, 8, 23)
+
+[node name="region_28" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_28" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_28/Area2D" index="0"]
+visible = false
+position = Vector2(376, -211)
+polygon = PackedVector2Array(11, 28, 3, 25, 0, 16, 6, 14, 10, 12, 13, 10, 13, 6, 12, 4, 9, 1, 7, -2, 7, -7, 9, -10, 12, -12, 19, -15, 27, -15, 32, -24, 35, -24, 37, -26, 39, -29, 55, -26, 60, -28, 70, -28, 76, -27, 80, -27, 84, -25, 85, -23, 83, -18, 88, -13, 92, -13, 101, -6, 103, 1, 104, 4, 102, 7, 102, 12, 99, 14, 97, 18, 93, 17, 91, 23, 87, 25, 76, 28, 68, 28, 64, 30, 50, 36, 43, 35, 38, 32, 35, 31, 28, 33, 22, 29)
+
+[node name="Polygon2D" parent="Board/Map/region_28/Area2D" index="1"]
+position = Vector2(376, -211)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(11, 28, 3, 25, 0, 16, 6, 14, 10, 12, 13, 10, 13, 6, 12, 4, 9, 1, 7, -2, 7, -7, 9, -10, 12, -12, 19, -15, 27, -15, 32, -24, 35, -24, 37, -26, 39, -29, 55, -26, 60, -28, 70, -28, 76, -27, 80, -27, 84, -25, 85, -23, 83, -18, 88, -13, 92, -13, 101, -6, 103, 1, 104, 4, 102, 7, 102, 12, 99, 14, 97, 18, 93, 17, 91, 23, 87, 25, 76, 28, 68, 28, 64, 30, 50, 36, 43, 35, 38, 32, 35, 31, 28, 33, 22, 29)
+
+[node name="region_29" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_29" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_29/Area2D" index="0"]
+visible = false
+position = Vector2(456, -221)
+polygon = PackedVector2Array(20, 35, 17, 28, 19, 24, 22, 22, 22, 17, 24, 14, 21, 4, 12, -3, 8, -3, 3, -8, 5, -13, 8, -13, 11, -11, 21, -11, 32, -13, 40, -15, 46, -16, 50, -18, 55, -18, 59, -15, 63, -14, 71, -16, 74, -14, 81, -6, 95, 5, 109, 5, 119, 13, 132, 20, 133, 23, 146, 23, 149, 28, 163, 37, 163, 41, 161, 43, 161, 47, 159, 47, 155, 50, 147, 50, 137, 57, 121, 60, 116, 49, 108, 48, 105, 47, 105, 43, 95, 43, 95, 39, 91, 37, 86, 37, 83, 38, 71, 38, 42, 42, 36, 35)
+
+[node name="Polygon2D" parent="Board/Map/region_29/Area2D" index="1"]
+position = Vector2(456, -221)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(20, 35, 17, 28, 19, 24, 22, 22, 22, 17, 24, 14, 21, 4, 12, -3, 8, -3, 3, -8, 5, -13, 8, -13, 11, -11, 21, -11, 32, -13, 40, -15, 46, -16, 50, -18, 55, -18, 59, -15, 63, -14, 71, -16, 74, -14, 81, -6, 95, 5, 109, 5, 119, 13, 132, 20, 133, 23, 146, 23, 149, 28, 163, 37, 163, 41, 161, 43, 161, 47, 159, 47, 155, 50, 147, 50, 137, 57, 121, 60, 116, 49, 108, 48, 105, 47, 105, 43, 95, 43, 95, 39, 91, 37, 86, 37, 83, 38, 71, 38, 42, 42, 36, 35)
+
+[node name="region_30" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_30" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_30/Area2D" index="0"]
+visible = false
+position = Vector2(561, -211)
+polygon = PackedVector2Array(16, -8, 39, -16, 59, -25, 65, -28, 71, -29, 74, -34, 80, -34, 82, -32, 90, -31, 94, -26, 105, -25, 105, 35, 80, 36, 72, 37, 56, 37, 56, 33, 58, 31, 58, 27, 44, 18, 41, 13, 28, 13, 27, 10, 14, 3, 4, -5)
+
+[node name="Polygon2D" parent="Board/Map/region_30/Area2D" index="1"]
+position = Vector2(561, -211)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(16, -8, 39, -16, 59, -25, 65, -28, 71, -29, 74, -34, 80, -34, 82, -32, 90, -31, 94, -26, 105, -25, 105, 35, 80, 36, 72, 37, 56, 37, 56, 33, 58, 31, 58, 27, 44, 18, 41, 13, 28, 13, 27, 10, 14, 3, 4, -5)
+
+[node name="region_31" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_31" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_31/Area2D" index="0"]
+visible = false
+position = Vector2(27, -274)
+polygon = PackedVector2Array(8, 20, 11, 15, 17, 15, 21, 8, 22, 3, 27, -4, 36, -7, 38, -13, 42, -17, 49, -32, 53, -35, 57, -34, 62, -34, 63, -36, 64, -39, 66, -40, 68, -39, 69, -36, 71, -36, 75, -36, 80, -46, 82, -46, 86, -37, 96, -37, 101, -47, 106, -48, 110, -40, 112, -36, 120, -36, 124, -33, 130, -31, 136, -30, 133, -26, 125, -25, 121, -23, 118, -20, 113, -15, 111, -12, 100, -13, 99, -11, 101, -7, 102, -2, 101, 3, 105, 9, 103, 11, 92, 13, 93, 18, 86, 23, 75, 24, 70, 26, 67, 31, 67, 36, 68, 42, 64, 43, 63, 45, 58, 42, 55, 43, 53, 42, 50, 42, 47, 45, 42, 45, 40, 43, 39, 39, 33, 38, 29, 38, 27, 36, 23, 38, 19, 36, 13, 32, 5, 31)
+
+[node name="Polygon2D" parent="Board/Map/region_31/Area2D" index="1"]
+position = Vector2(27, -274)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(8, 20, 11, 15, 17, 15, 21, 8, 22, 3, 27, -4, 36, -7, 38, -13, 42, -17, 49, -32, 53, -35, 57, -34, 62, -34, 63, -36, 64, -39, 66, -40, 68, -39, 69, -36, 71, -36, 75, -36, 80, -46, 82, -46, 86, -37, 96, -37, 101, -47, 106, -48, 110, -40, 112, -36, 120, -36, 124, -33, 130, -31, 136, -30, 133, -26, 125, -25, 121, -23, 118, -20, 113, -15, 111, -12, 100, -13, 99, -11, 101, -7, 102, -2, 101, 3, 105, 9, 103, 11, 92, 13, 93, 18, 86, 23, 75, 24, 70, 26, 67, 31, 67, 36, 68, 42, 64, 43, 63, 45, 58, 42, 55, 43, 53, 42, 50, 42, 47, 45, 42, 45, 40, 43, 39, 39, 33, 38, 29, 38, 27, 36, 23, 38, 19, 36, 13, 32, 5, 31)
+
+[node name="region_32" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_32" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_32/Area2D" index="0"]
+visible = false
+position = Vector2(198, -287)
+polygon = PackedVector2Array(50, 38, 37, 35, 32, 33, 29, 29, 25, 16, 17, 14, 17, 3, 23, -4, 29, -5, 33, -7, 35, -12, 42, -17, 57, -15, 69, -11, 85, -4, 107, 6, 117, 13, 120, 18, 123, 20, 124, 24, 124, 28, 117, 30, 111, 40, 108, 41, 106, 43, 101, 45, 95, 45, 77, 50, 63, 50, 57, 46)
+
+[node name="Polygon2D" parent="Board/Map/region_32/Area2D" index="1"]
+position = Vector2(198, -287)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(50, 38, 37, 35, 32, 33, 29, 29, 25, 16, 17, 14, 17, 3, 23, -4, 29, -5, 33, -7, 35, -12, 42, -17, 57, -15, 69, -11, 85, -4, 107, 6, 117, 13, 120, 18, 123, 20, 124, 24, 124, 28, 117, 30, 111, 40, 108, 41, 106, 43, 101, 45, 95, 45, 77, 50, 63, 50, 57, 46)
+
+[node name="region_33" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_33/Area2D" index="0"]
+visible = false
+position = Vector2(424, -259)
+polygon = PackedVector2Array(16, 2, 23, 0, 30, -3, 35, -6, 39, -7, 51, -10, 67, -10, 76, -7, 82, -1, 103, 4, 104, 7, 101, 10, 100, 15, 102, 17, 106, 18, 116, 19, 114, 22, 112, 24, 109, 24, 104, 33, 96, 33, 89, 36, 86, 38, 84, 41, 84, 46, 86, 49, 89, 52, 90, 54, 90, 58, 87, 60, 83, 62, 77, 64, 50, 61, 43, 57, 39, 55, 34, 49, 27, 48, 21, 45, 12, 43, 8, 38, 8, 33, 6, 31, 6, 27, 3, 23, 1, 20, -6, 17, 0, 17, 5, 15, 7, 13, 10, 12)
+
+[node name="Polygon2D" parent="Board/Map/region_33/Area2D" index="1"]
+position = Vector2(424, -259)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(16, 2, 23, 0, 30, -3, 35, -6, 39, -7, 51, -10, 67, -10, 76, -7, 82, -1, 103, 4, 104, 7, 101, 10, 100, 15, 102, 17, 106, 18, 116, 19, 114, 22, 112, 24, 109, 24, 104, 33, 96, 33, 89, 36, 86, 38, 84, 41, 84, 46, 86, 49, 89, 52, 90, 54, 90, 58, 87, 60, 83, 62, 77, 64, 50, 61, 43, 57, 39, 55, 34, 49, 27, 48, 21, 45, 12, 43, 8, 38, 8, 33, 6, 31, 6, 27, 3, 23, 1, 20, -6, 17, 0, 17, 5, 15, 7, 13, 10, 12)
+
+[node name="region_34" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_34" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_34/Area2D" index="0"]
+visible = false
+position = Vector2(390, -274)
+polygon = PackedVector2Array(25, 34, 15, 33, 11, 32, 9, 30, 10, 25, 13, 22, 12, 19, -9, 14, -15, 8, -24, 5, -21, 3, -20, 0, -22, -3, -22, -8, -17, -14, -15, -20, -3, -14, 8, -6, 12, -8, 24, -7, 42, -6, 45, -9, 60, -16, 73, -16, 83, -16, 93, -10, 97, -6, 106, -1, 111, 0, 117, -1, 129, -1, 141, -1, 146, 2, 148, 5, 148, 17, 145, 19, 143, 19, 138, 26, 132, 29, 128, 27, 126, 27, 123, 32, 121, 35, 116, 35, 112, 37, 106, 38, 98, 40, 87, 42, 77, 42, 74, 40, 71, 40, 70, 38, 66, 36, 62, 36, 56, 35, 46, 35, 41, 37)
+
+[node name="Polygon2D" parent="Board/Map/region_34/Area2D" index="1"]
+position = Vector2(390, -274)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(25, 34, 15, 33, 11, 32, 9, 30, 10, 25, 13, 22, 12, 19, -9, 14, -15, 8, -24, 5, -21, 3, -20, 0, -22, -3, -22, -8, -17, -14, -15, -20, -3, -14, 8, -6, 12, -8, 24, -7, 42, -6, 45, -9, 60, -16, 73, -16, 83, -16, 93, -10, 97, -6, 106, -1, 111, 0, 117, -1, 129, -1, 141, -1, 146, 2, 148, 5, 148, 17, 145, 19, 143, 19, 138, 26, 132, 29, 128, 27, 126, 27, 123, 32, 121, 35, 116, 35, 112, 37, 106, 38, 98, 40, 87, 42, 77, 42, 74, 40, 71, 40, 70, 38, 66, 36, 62, 36, 56, 35, 46, 35, 41, 37)
+
+[node name="region_35" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_35" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_35/Area2D" index="0"]
+visible = false
+position = Vector2(520, -259)
+polygon = PackedVector2Array(31, 43, 17, 32, 10, 24, 7, 22, -1, 24, -5, 23, -9, 20, -4, 12, -2, 12, 2, 14, 8, 11, 13, 4, 15, 4, 18, 2, 23, -1, 28, -5, 30, -9, 32, -6, 34, -5, 36, -8, 38, -13, 41, -11, 44, -8, 47, -9, 48, -11, 53, -7, 55, -5, 59, -4, 62, -1, 68, -1, 72, -7, 74, -8, 77, -5, 81, -2, 93, -3, 97, -12, 98, -9, 100, -8, 106, -9, 110, -12, 112, -12, 114, -8, 117, -8, 120, -12, 122, -8, 132, -8, 137, 2, 142, 2, 146, 4, 146, 23, 135, 22, 131, 17, 123, 16, 121, 14, 115, 14, 112, 19, 106, 20, 100, 23, 80, 32, 57, 40, 45, 43)
+
+[node name="Polygon2D" parent="Board/Map/region_35/Area2D" index="1"]
+position = Vector2(520, -259)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(31, 43, 17, 32, 10, 24, 7, 22, -1, 24, -5, 23, -9, 20, -4, 12, -2, 12, 2, 14, 8, 11, 13, 4, 15, 4, 18, 2, 23, -1, 28, -5, 30, -9, 32, -6, 34, -5, 36, -8, 38, -13, 41, -11, 44, -8, 47, -9, 48, -11, 53, -7, 55, -5, 59, -4, 62, -1, 68, -1, 72, -7, 74, -8, 77, -5, 81, -2, 93, -3, 97, -12, 98, -9, 100, -8, 106, -9, 110, -12, 112, -12, 114, -8, 117, -8, 120, -12, 122, -8, 132, -8, 137, 2, 142, 2, 146, 4, 146, 23, 135, 22, 131, 17, 123, 16, 121, 14, 115, 14, 112, 19, 106, 20, 100, 23, 80, 32, 57, 40, 45, 43)
+
+[node name="region_36" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_36" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_36/Area2D" index="0"]
+visible = false
+position = Vector2(-37, -324)
+polygon = PackedVector2Array(19, 32, 20, 28, 22, 24, 30, 15, 32, 8, 35, 3, 40, 2, 41, -2, 39, -6, 35, -9, 30, -13, 28, -20, 24, -24, 23, -29, 25, -38, 37, -38, 45, -34, 62, -34, 69, -35, 76, -33, 84, -27, 91, -24, 107, -15, 121, -13, 128, -11, 128, -8, 126, -6, 123, -6, 121, -3, 121, 2, 118, 6, 120, 10, 121, 16, 117, 15, 113, 18, 106, 33, 102, 37, 100, 43, 91, 46, 83, 46, 80, 44, 60, 46, 52, 49, 51, 54, 45, 54, 42, 53, 42, 49, 36, 45, 35, 40, 25, 39)
+
+[node name="Polygon2D" parent="Board/Map/region_36/Area2D" index="1"]
+position = Vector2(-37, -324)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(19, 32, 20, 28, 22, 24, 30, 15, 32, 8, 35, 3, 40, 2, 41, -2, 39, -6, 35, -9, 30, -13, 28, -20, 24, -24, 23, -29, 25, -38, 37, -38, 45, -34, 62, -34, 69, -35, 76, -33, 84, -27, 91, -24, 107, -15, 121, -13, 128, -11, 128, -8, 126, -6, 123, -6, 121, -3, 121, 2, 118, 6, 120, 10, 121, 16, 117, 15, 113, 18, 106, 33, 102, 37, 100, 43, 91, 46, 83, 46, 80, 44, 60, 46, 52, 49, 51, 54, 45, 54, 42, 53, 42, 49, 36, 45, 35, 40, 25, 39)
+
+[node name="region_37" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_37" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_37/Area2D" index="0"]
+visible = false
+position = Vector2(366, -322)
+polygon = PackedVector2Array(9, 28, 7, 23, 3, 22, 3, 17, 8, 12, 8, 6, 18, -10, 22, -13, 27, -15, 36, -17, 67, -17, 104, -8, 105, -6, 112, 0, 112, 3, 102, 8, 104, 15, 104, 22, 101, 27, 97, 32, 84, 32, 69, 39, 66, 42, 48, 41, 36, 40, 32, 42, 21, 34)
+
+[node name="Polygon2D" parent="Board/Map/region_37/Area2D" index="1"]
+position = Vector2(366, -322)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(9, 28, 7, 23, 3, 22, 3, 17, 8, 12, 8, 6, 18, -10, 22, -13, 27, -15, 36, -17, 67, -17, 104, -8, 105, -6, 112, 0, 112, 3, 102, 8, 104, 15, 104, 22, 101, 27, 97, 32, 84, 32, 69, 39, 66, 42, 48, 41, 36, 40, 32, 42, 21, 34)
+
+[node name="region_38" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_38" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_38/Area2D" index="0"]
+visible = false
+position = Vector2(127, -302)
+polygon = PackedVector2Array(66, 32, 61, 30, 53, 26, 44, 23, 37, 21, 27, 20, 20, 19, 16, 17, 11, 16, 13, 13, 18, 8, 21, 5, 25, 3, 33, 2, 36, -2, 41, -4, 46, -13, 50, -15, 57, -17, 60, -22, 65, -27, 71, -27, 78, -24, 76, -21, 79, -20, 83, -23, 90, -21, 84, -18, 83, -15, 73, -13, 72, -10, 77, -7, 81, -5, 86, -6, 90, -9, 88, -12, 90, -15, 94, -16, 102, -11, 103, -7, 107, -3, 113, -2, 106, 3, 104, 8, 100, 10, 94, 11, 88, 18, 88, 29, 77, 28)
+
+[node name="Polygon2D" parent="Board/Map/region_38/Area2D" index="1"]
+position = Vector2(127, -302)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(66, 32, 61, 30, 53, 26, 44, 23, 37, 21, 27, 20, 20, 19, 16, 17, 11, 16, 13, 13, 18, 8, 21, 5, 25, 3, 33, 2, 36, -2, 41, -4, 46, -13, 50, -15, 57, -17, 60, -22, 65, -27, 71, -27, 78, -24, 76, -21, 79, -20, 83, -23, 90, -21, 84, -18, 83, -15, 73, -13, 72, -10, 77, -7, 81, -5, 86, -6, 90, -9, 88, -12, 90, -15, 94, -16, 102, -11, 103, -7, 107, -3, 113, -2, 106, 3, 104, 8, 100, 10, 94, 11, 88, 18, 88, 29, 77, 28)
+
+[node name="region_39" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_39" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_39/Area2D" index="0"]
+visible = false
+position = Vector2(72, -347)
+polygon = PackedVector2Array(12, 39, 11, 33, 9, 29, 12, 25, 12, 20, 14, 17, 17, 17, 19, 15, 19, 12, 25, 6, 32, 6, 37, -3, 46, -8, 49, -14, 54, -18, 60, -17, 67, -13, 83, -13, 100, -8, 111, -7, 113, -6, 114, -4, 114, 5, 113, 9, 112, 11, 113, 14, 117, 15, 119, 16, 120, 18, 115, 23, 112, 28, 105, 30, 101, 32, 96, 41, 91, 43, 85, 42, 79, 40, 75, 37, 67, 37, 65, 33, 61, 25, 56, 26, 51, 36, 41, 36, 37, 27, 35, 27, 30, 37, 26, 37, 24, 37, 23, 34, 21, 33, 19, 34, 18, 37, 17, 39)
+
+[node name="Polygon2D" parent="Board/Map/region_39/Area2D" index="1"]
+position = Vector2(72, -347)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(12, 39, 11, 33, 9, 29, 12, 25, 12, 20, 14, 17, 17, 17, 19, 15, 19, 12, 25, 6, 32, 6, 37, -3, 46, -8, 49, -14, 54, -18, 60, -17, 67, -13, 83, -13, 100, -8, 111, -7, 113, -6, 114, -4, 114, 5, 113, 9, 112, 11, 113, 14, 117, 15, 119, 16, 120, 18, 115, 23, 112, 28, 105, 30, 101, 32, 96, 41, 91, 43, 85, 42, 79, 40, 75, 37, 67, 37, 65, 33, 61, 25, 56, 26, 51, 36, 41, 36, 37, 27, 35, 27, 30, 37, 26, 37, 24, 37, 23, 34, 21, 33, 19, 34, 18, 37, 17, 39)
+
+[node name="region_40" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_40" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_40/Area2D" index="0"]
+visible = false
+position = Vector2(465, -315)
+polygon = PackedVector2Array(-2, 25, 2, 20, 5, 15, 5, 8, 3, 1, 13, -4, 13, -7, 6, -13, 5, -15, 9, -17, 15, -17, 16, -20, 14, -22, 10, -22, 10, -25, 12, -27, 22, -33, 31, -36, 41, -33, 49, -35, 55, -35, 64, -32, 72, -28, 81, -23, 87, -21, 99, -22, 116, -16, 123, -14, 130, -9, 128, -6, 129, -3, 128, 1, 120, 1, 111, 3, 104, 7, 97, 12, 93, 15, 91, 17, 92, 19, 107, 26, 109, 28, 110, 30, 108, 33, 108, 35, 114, 38, 114, 41, 112, 43, 110, 45, 109, 48, 110, 51, 103, 45, 102, 47, 99, 48, 96, 45, 93, 43, 91, 48, 89, 51, 87, 50, 85, 47, 83, 51, 78, 55, 73, 58, 73, 46, 71, 43, 66, 40, 54, 40, 42, 40, 36, 41, 31, 40, 22, 35, 18, 31, 8, 25)
+
+[node name="Polygon2D" parent="Board/Map/region_40/Area2D" index="1"]
+position = Vector2(465, -315)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-2, 25, 2, 20, 5, 15, 5, 8, 3, 1, 13, -4, 13, -7, 6, -13, 5, -15, 9, -17, 15, -17, 16, -20, 14, -22, 10, -22, 10, -25, 12, -27, 22, -33, 31, -36, 41, -33, 49, -35, 55, -35, 64, -32, 72, -28, 81, -23, 87, -21, 99, -22, 116, -16, 123, -14, 130, -9, 128, -6, 129, -3, 128, 1, 120, 1, 111, 3, 104, 7, 97, 12, 93, 15, 91, 17, 92, 19, 107, 26, 109, 28, 110, 30, 108, 33, 108, 35, 114, 38, 114, 41, 112, 43, 110, 45, 109, 48, 110, 51, 103, 45, 102, 47, 99, 48, 96, 45, 93, 43, 91, 48, 89, 51, 87, 50, 85, 47, 83, 51, 78, 55, 73, 58, 73, 46, 71, 43, 66, 40, 54, 40, 42, 40, 36, 41, 31, 40, 22, 35, 18, 31, 8, 25)
+
+[node name="region_41" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_41/Area2D" index="0"]
+visible = false
+position = Vector2(648, -379)
+polygon = PackedVector2Array(-27, 8, -26, 5, -29, 3, -19, 0, -13, -2, -1, -4, 12, -5, 23, -9, 37, -13, 43, -11, 52, -11, 56, -9, 98, -12, 108, -15, 113, -17, 143, -19, 143, 62, 117, 56, 111, 56, 105, 58, 85, 67, 77, 66, 70, 65, 71, 61, 70, 58, 72, 55, 65, 50, 58, 48, 41, 42, 29, 43, 23, 41, 6, 32, -3, 29, -9, 29, -17, 31, -27, 28, -26, 26, -37, 23, -37, 20, -24, 16, -24, 14, -26, 11)
+
+[node name="Polygon2D" parent="Board/Map/region_41/Area2D" index="1"]
+position = Vector2(648, -379)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-27, 8, -26, 5, -29, 3, -19, 0, -13, -2, -1, -4, 12, -5, 23, -9, 37, -13, 43, -11, 52, -11, 56, -9, 98, -12, 108, -15, 113, -17, 143, -19, 143, 62, 117, 56, 111, 56, 105, 58, 85, 67, 77, 66, 70, 65, 71, 61, 70, 58, 72, 55, 65, 50, 58, 48, 41, 42, 29, 43, 23, 41, 6, 32, -3, 29, -9, 29, -17, 31, -27, 28, -26, 26, -37, 23, -37, 20, -24, 16, -24, 14, -26, 11)
+
+[node name="region_42" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_42" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_42/Area2D" index="0"]
+visible = false
+position = Vector2(561, -302)
+polygon = PackedVector2Array(18, 39, 14, 38, 13, 35, 14, 32, 16, 30, 18, 28, 18, 25, 12, 22, 12, 20, 14, 17, 13, 15, 11, 13, -4, 6, -5, 4, -3, 2, 1, -1, 8, -6, 15, -10, 24, -12, 32, -12, 39, -11, 47, -10, 67, -19, 73, -21, 79, -21, 105, -15, 105, 47, 101, 45, 96, 45, 91, 35, 81, 35, 79, 31, 76, 35, 73, 35, 71, 31, 69, 31, 65, 34, 59, 35, 57, 34, 56, 31, 52, 40, 40, 41, 36, 38, 33, 35, 31, 36, 27, 42, 21, 42)
+
+[node name="Polygon2D" parent="Board/Map/region_42/Area2D" index="1"]
+position = Vector2(561, -302)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(18, 39, 14, 38, 13, 35, 14, 32, 16, 30, 18, 28, 18, 25, 12, 22, 12, 20, 14, 17, 13, 15, 11, 13, -4, 6, -5, 4, -3, 2, 1, -1, 8, -6, 15, -10, 24, -12, 32, -12, 39, -11, 47, -10, 67, -19, 73, -21, 79, -21, 105, -15, 105, 47, 101, 45, 96, 45, 91, 35, 81, 35, 79, 31, 76, 35, 73, 35, 71, 31, 69, 31, 65, 34, 59, 35, 57, 34, 56, 31, 52, 40, 40, 41, 36, 38, 33, 35, 31, 36, 27, 42, 21, 42)
+
+[node name="region_43" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_43" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_43/Area2D" index="0"]
+visible = false
+position = Vector2(-68, -398)
+polygon = PackedVector2Array(56, 36, 45, 34, 39, 29, 36, 28, 35, 31, 25, 32, 24, 28, 18, 26, 15, 21, 5, 21, 1, 17, 2, 13, 4, 12, -1, 9, -8, 4, -4, 2, 7, 2, 16, -3, 23, -1, 32, 0, 43, -9, 45, -15, 44, -19, 39, -25, 40, -28, 49, -29, 53, -27, 59, -27, 66, -21, 75, -21, 85, -20, 93, -16, 99, -10, 106, -6, 111, -2, 111, 1, 110, 3, 105, 8, 104, 11, 106, 13, 116, 20, 118, 24, 117, 32, 112, 36, 100, 39, 93, 40, 76, 40, 68, 36)
+
+[node name="Polygon2D" parent="Board/Map/region_43/Area2D" index="1"]
+position = Vector2(-68, -398)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(56, 36, 45, 34, 39, 29, 36, 28, 35, 31, 25, 32, 24, 28, 18, 26, 15, 21, 5, 21, 1, 17, 2, 13, 4, 12, -1, 9, -8, 4, -4, 2, 7, 2, 16, -3, 23, -1, 32, 0, 43, -9, 45, -15, 44, -19, 39, -25, 40, -28, 49, -29, 53, -27, 59, -27, 66, -21, 75, -21, 85, -20, 93, -16, 99, -10, 106, -6, 111, -2, 111, 1, 110, 3, 105, 8, 104, 11, 106, 13, 116, 20, 118, 24, 117, 32, 112, 36, 100, 39, 93, 40, 76, 40, 68, 36)
+
+[node name="region_44" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_44" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_44/Area2D" index="0"]
+visible = false
+position = Vector2(27, -383)
+polygon = PackedVector2Array(43, 44, 27, 35, 20, 32, 12, 26, 5, 24, 17, 21, 22, 17, 23, 9, 21, 5, 11, -2, 9, -4, 10, -7, 15, -12, 16, -14, 16, -17, 23, -17, 27, -21, 36, -19, 44, -21, 48, -24, 54, -26, 64, -23, 72, -20, 84, -21, 88, -19, 90, -15, 109, -9, 118, -9, 134, -12, 123, -2, 112, 5, 106, 12, 104, 15, 101, 16, 99, 18, 94, 22, 91, 28, 82, 33, 77, 42, 70, 42, 64, 48, 57, 46)
+
+[node name="Polygon2D" parent="Board/Map/region_44/Area2D" index="1"]
+position = Vector2(27, -383)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(43, 44, 27, 35, 20, 32, 12, 26, 5, 24, 17, 21, 22, 17, 23, 9, 21, 5, 11, -2, 9, -4, 10, -7, 15, -12, 16, -14, 16, -17, 23, -17, 27, -21, 36, -19, 44, -21, 48, -24, 54, -26, 64, -23, 72, -20, 84, -21, 88, -19, 90, -15, 109, -9, 118, -9, 134, -12, 123, -2, 112, 5, 106, 12, 104, 15, 101, 16, 99, 18, 94, 22, 91, 28, 82, 33, 77, 42, 70, 42, 64, 48, 57, 46)
+
+[node name="region_45" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_45" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_45/Area2D" index="0"]
+visible = false
+position = Vector2(133, -390)
+polygon = PackedVector2Array(39, 35, 22, 30, 6, 30, -1, 26, -7, 25, -5, 23, -2, 22, 0, 19, 6, 12, 17, 5, 28, -5, 38, -7, 52, -8, 58, -12, 62, -15, 65, -21, 72, -26, 76, -27, 85, -28, 89, -27, 90, -23, 97, -22, 101, -21, 109, -20, 112, -22, 120, -19, 105, -8, 100, -7, 98, -4, 95, 4, 95, 13, 93, 17, 91, 20, 101, 26, 75, 36, 65, 31, 61, 32, 54, 35, 52, 37, 50, 36)
+
+[node name="Polygon2D" parent="Board/Map/region_45/Area2D" index="1"]
+position = Vector2(133, -390)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(39, 35, 22, 30, 6, 30, -1, 26, -7, 25, -5, 23, -2, 22, 0, 19, 6, 12, 17, 5, 28, -5, 38, -7, 52, -8, 58, -12, 62, -15, 65, -21, 72, -26, 76, -27, 85, -28, 89, -27, 90, -23, 97, -22, 101, -21, 109, -20, 112, -22, 120, -19, 105, -8, 100, -7, 98, -4, 95, 4, 95, 13, 93, 17, 91, 20, 101, 26, 75, 36, 65, 31, 61, 32, 54, 35, 52, 37, 50, 36)
+
+[node name="region_46" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_46" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_46/Area2D" index="0"]
+visible = false
+position = Vector2(380, -365)
+polygon = PackedVector2Array(4, 33, 0, 30, -1, 27, -3, 23, -6, 20, -11, 18, -22, 16, -17, 12, -12, 12, -10, 10, 0, 7, 14, 1, 16, -5, 24, -13, 28, -14, 34, -16, 41, -16, 44, -18, 48, -20, 52, -19, 64, -13, 71, -13, 75, -18, 80, -18, 101, -12, 114, -11, 117, -9, 116, -6, 117, -3, 119, 0, 119, 2, 106, 6, 106, 9, 117, 12, 116, 14, 107, 17, 97, 23, 95, 25, 95, 28, 99, 28, 101, 30, 100, 33, 94, 33, 90, 35, 53, 26, 22, 26, 13, 28, 8, 30)
+
+[node name="Polygon2D" parent="Board/Map/region_46/Area2D" index="1"]
+position = Vector2(380, -365)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(4, 33, 0, 30, -1, 27, -3, 23, -6, 20, -11, 18, -22, 16, -17, 12, -12, 12, -10, 10, 0, 7, 14, 1, 16, -5, 24, -13, 28, -14, 34, -16, 41, -16, 44, -18, 48, -20, 52, -19, 64, -13, 71, -13, 75, -18, 80, -18, 101, -12, 114, -11, 117, -9, 116, -6, 117, -3, 119, 0, 119, 2, 106, 6, 106, 9, 117, 12, 116, 14, 107, 17, 97, 23, 95, 25, 95, 28, 99, 28, 101, 30, 100, 33, 94, 33, 90, 35, 53, 26, 22, 26, 13, 28, 8, 30)
+
+[node name="region_47" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_47" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_47/Area2D" index="0"]
+visible = false
+position = Vector2(215, -398)
+polygon = PackedVector2Array(19, 34, 9, 28, 11, 25, 13, 21, 13, 12, 16, 4, 18, 1, 23, 0, 38, -11, 44, -14, 60, -11, 70, -14, 84, -14, 93, -9, 102, -7, 100, -2, 99, 3, 92, 9, 86, 15, 78, 20, 74, 27, 73, 34, 62, 37, 53, 35, 44, 37, 25, 36)
+
+[node name="Polygon2D" parent="Board/Map/region_47/Area2D" index="1"]
+position = Vector2(215, -398)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(19, 34, 9, 28, 11, 25, 13, 21, 13, 12, 16, 4, 18, 1, 23, 0, 38, -11, 44, -14, 60, -11, 70, -14, 84, -14, 93, -9, 102, -7, 100, -2, 99, 3, 92, 9, 86, 15, 78, 20, 74, 27, 73, 34, 62, 37, 53, 35, 44, 37, 25, 36)
+
+[node name="region_48" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_48" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_48/Area2D" index="0"]
+visible = false
+position = Vector2(279, -385)
+polygon = PackedVector2Array(39, 37, 34, 37, 9, 22, 10, 14, 14, 7, 22, 2, 28, -4, 35, -10, 36, -15, 38, -20, 47, -24, 55, -26, 67, -25, 76, -22, 86, -17, 110, -7, 125, 7, 117, 15, 115, 21, 101, 27, 91, 30, 89, 32, 84, 32, 79, 36, 73, 34, 63, 34, 58, 36)
+
+[node name="Polygon2D" parent="Board/Map/region_48/Area2D" index="1"]
+position = Vector2(279, -385)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(39, 37, 34, 37, 9, 22, 10, 14, 14, 7, 22, 2, 28, -4, 35, -10, 36, -15, 38, -20, 47, -24, 55, -26, 67, -25, 76, -22, 86, -17, 110, -7, 125, 7, 117, 15, 115, 21, 101, 27, 91, 30, 89, 32, 84, 32, 79, 36, 73, 34, 63, 34, 58, 36)
+
+[node name="region_49" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_49/Area2D" index="0"]
+visible = false
+position = Vector2(166, -458)
+polygon = PackedVector2Array(57, 4, 65, 0, 70, -3, 71, -5, 71, -8, 69, -10, 71, -11, 77, -13, 85, -13, 95, -17, 106, -19, 155, -19, 151, -16, 141, -12, 125, -7, 109, -2, 102, 2, 98, 7, 102, 8, 108, 9, 111, 11, 109, 13, 103, 15, 104, 17, 110, 19, 111, 21, 109, 23, 94, 30, 82, 35, 74, 40, 74, 44, 72, 47, 65, 52, 58, 55, 50, 52, 40, 49, 34, 51, 30, 54, 22, 56, 13, 54, 9, 58, 2, 58, -3, 54, -10, 50, -16, 44, -24, 40, -23, 37, -18, 34, 1, 27, 2, 25, 2, 17, 13, 10, 36, 9)
+
+[node name="Polygon2D" parent="Board/Map/region_49/Area2D" index="1"]
+position = Vector2(166, -458)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(57, 4, 65, 0, 70, -3, 71, -5, 71, -8, 69, -10, 71, -11, 77, -13, 85, -13, 95, -17, 106, -19, 155, -19, 151, -16, 141, -12, 125, -7, 109, -2, 102, 2, 98, 7, 102, 8, 108, 9, 111, 11, 109, 13, 103, 15, 104, 17, 110, 19, 111, 21, 109, 23, 94, 30, 82, 35, 74, 40, 74, 44, 72, 47, 65, 52, 58, 55, 50, 52, 40, 49, 34, 51, 30, 54, 22, 56, 13, 54, 9, 58, 2, 58, -3, 54, -10, 50, -16, 44, -24, 40, -23, 37, -18, 34, 1, 27, 2, 25, 2, 17, 13, 10, 36, 9)
+
+[node name="region_50" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_50" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_50/Area2D" index="0"]
+visible = false
+position = Vector2(122, -437)
+polygon = PackedVector2Array(-5, 39, -7, 35, -11, 33, -23, 34, -16, 31, -9, 26, -7, 23, -7, 19, 1, 14, 13, 9, 28, 2, 30, 0, 29, -2, 23, -4, 22, -6, 28, -8, 30, -10, 27, -12, 21, -13, 17, -14, 21, -19, 28, -23, 44, -28, 60, -33, 70, -37, 74, -40, 117, -40, 114, -34, 109, -30, 110, -27, 113, -24, 110, -18, 104, -13, 99, -7, 87, 1, 86, 6, 92, 8, 96, 12, 96, 17, 96, 19, 87, 20, 83, 21, 76, 26, 73, 32, 69, 35, 63, 39, 49, 40, 39, 42, 23, 45, 14, 45)
+
+[node name="Polygon2D" parent="Board/Map/region_50/Area2D" index="1"]
+position = Vector2(122, -437)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-5, 39, -7, 35, -11, 33, -23, 34, -16, 31, -9, 26, -7, 23, -7, 19, 1, 14, 13, 9, 28, 2, 30, 0, 29, -2, 23, -4, 22, -6, 28, -8, 30, -10, 27, -12, 21, -13, 17, -14, 21, -19, 28, -23, 44, -28, 60, -33, 70, -37, 74, -40, 117, -40, 114, -34, 109, -30, 110, -27, 113, -24, 110, -18, 104, -13, 99, -7, 87, 1, 86, 6, 92, 8, 96, 12, 96, 17, 96, 19, 87, 20, 83, 21, 76, 26, 73, 32, 69, 35, 63, 39, 49, 40, 39, 42, 23, 45, 14, 45)
+
+[node name="region_51" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_51" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_51/Area2D" index="0"]
+visible = false
+position = Vector2(198, -448)
+polygon = PackedVector2Array(25, 35, 24, 31, 20, 30, 20, 28, 20, 23, 16, 19, 10, 17, 11, 12, 23, 4, 28, -2, 34, -7, 37, -13, 34, -16, 33, -19, 38, -23, 41, -29, 104, -29, 103, -27, 103, -25, 105, -23, 108, -21, 113, -18, 120, -15, 126, -12, 128, -9, 125, -5, 115, 0, 105, 4, 97, 7, 87, 7, 80, 9, 74, 13, 74, 17, 75, 20, 77, 24, 80, 30, 84, 35, 87, 36, 77, 39, 61, 36, 55, 39, 47, 36, 44, 38, 36, 37)
+
+[node name="Polygon2D" parent="Board/Map/region_51/Area2D" index="1"]
+position = Vector2(198, -448)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(25, 35, 24, 31, 20, 30, 20, 28, 20, 23, 16, 19, 10, 17, 11, 12, 23, 4, 28, -2, 34, -7, 37, -13, 34, -16, 33, -19, 38, -23, 41, -29, 104, -29, 103, -27, 103, -25, 105, -23, 108, -21, 113, -18, 120, -15, 126, -12, 128, -9, 125, -5, 115, 0, 105, 4, 97, 7, 87, 7, 80, 9, 74, 13, 74, 17, 75, 20, 77, 24, 80, 30, 84, 35, 87, 36, 77, 39, 61, 36, 55, 39, 47, 36, 44, 38, 36, 37)
+
+[node name="region_52" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_52" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_52/Area2D" index="0"]
+visible = false
+position = Vector2(274, -448)
+polygon = PackedVector2Array(11, 36, 8, 35, 4, 30, 1, 24, -1, 20, -2, 17, -2, 13, 4, 9, 11, 7, 21, 7, 29, 4, 39, 0, 49, -5, 52, -9, 50, -12, 44, -15, 37, -18, 32, -21, 29, -23, 27, -25, 27, -27, 28, -29, 73, -29, 82, -17, 84, -18, 86, -18, 87, -16, 89, -14, 90, -12, 93, -11, 95, -13, 97, -12, 98, -14, 101, -12, 103, -9, 105, -10, 108, -11, 111, -9, 114, -9, 116, -10, 117, -8, 118, -6, 119, -5, 121, -6, 123, -7, 124, -5, 129, -3, 132, -1, 117, 0, 116, 5, 113, 8, 110, 10, 110, 13, 112, 14, 115, 15, 119, 17, 122, 15, 125, 11, 126, 11, 128, 15, 130, 16, 132, 14, 133, 15, 134, 18, 138, 19, 140, 21, 141, 25, 126, 33, 126, 37, 110, 43, 104, 42, 101, 44, 95, 44, 91, 46, 81, 41, 72, 38, 60, 37, 52, 39, 43, 43, 34, 41, 25, 36)
+
+[node name="Polygon2D" parent="Board/Map/region_52/Area2D" index="1"]
+position = Vector2(274, -448)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(11, 36, 8, 35, 4, 30, 1, 24, -1, 20, -2, 17, -2, 13, 4, 9, 11, 7, 21, 7, 29, 4, 39, 0, 49, -5, 52, -9, 50, -12, 44, -15, 37, -18, 32, -21, 29, -23, 27, -25, 27, -27, 28, -29, 73, -29, 82, -17, 84, -18, 86, -18, 87, -16, 89, -14, 90, -12, 93, -11, 95, -13, 97, -12, 98, -14, 101, -12, 103, -9, 105, -10, 108, -11, 111, -9, 114, -9, 116, -10, 117, -8, 118, -6, 119, -5, 121, -6, 123, -7, 124, -5, 129, -3, 132, -1, 117, 0, 116, 5, 113, 8, 110, 10, 110, 13, 112, 14, 115, 15, 119, 17, 122, 15, 125, 11, 126, 11, 128, 15, 130, 16, 132, 14, 133, 15, 134, 18, 138, 19, 140, 21, 141, 25, 126, 33, 126, 37, 110, 43, 104, 42, 101, 44, 95, 44, 91, 46, 81, 41, 72, 38, 60, 37, 52, 39, 43, 43, 34, 41, 25, 36)
+
+[node name="region_53" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_53" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_53/Area2D" index="0"]
+visible = false
+position = Vector2(366, -448)
+polygon = PackedVector2Array(23, 56, -1, 46, 3, 44, 9, 44, 12, 42, 18, 43, 34, 37, 34, 33, 49, 25, 48, 21, 46, 19, 42, 18, 41, 15, 40, 14, 38, 16, 36, 15, 34.03464, 11, 33, 11, 30, 15, 27, 17, 23, 15, 20, 14, 18, 13, 18, 10, 21, 8, 24, 5, 25, 0, 40, -1, 37, -3, 32, -5, 31, -7, 29, -6, 27, -5, 26, -6, 25, -8, 24, -10, 22, -9, 19, -9, 16, -11, 13, -10, 11, -9, 9, -12, 6, -14, 5, -12, 3, -13, 1, -11, -2, -12, -3, -14, -5, -16, -6, -18, -8, -18, -10, -17, -19, -29, 151, -29, 151, -27, 150, -25, 149, -24, 143, -23, 139, -21, 134, -18, 133, -15, 132, -13, 130, -12, 116, -6, 112, 1, 107, 11, 75, 15, 74, 16, 74, 17, 88, 28, 87, 30, 73, 35, 63, 40, 61, 43)
+
+[node name="Polygon2D" parent="Board/Map/region_53/Area2D" index="1"]
+position = Vector2(366, -448)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(23, 56, -1, 46, 3, 44, 9, 44, 12, 42, 18, 43, 34, 37, 34, 33, 49, 25, 48, 21, 46, 19, 42, 18, 41, 15, 40, 14, 38, 16, 36, 15, 34.03464, 11, 33, 11, 30, 15, 27, 17, 23, 15, 20, 14, 18, 13, 18, 10, 21, 8, 24, 5, 25, 0, 40, -1, 37, -3, 32, -5, 31, -7, 29, -6, 27, -5, 26, -6, 25, -8, 24, -10, 22, -9, 19, -9, 16, -11, 13, -10, 11, -9, 9, -12, 6, -14, 5, -12, 3, -13, 1, -11, -2, -12, -3, -14, -5, -16, -6, -18, -8, -18, -10, -17, -19, -29, 151, -29, 151, -27, 150, -25, 149, -24, 143, -23, 139, -21, 134, -18, 133, -15, 132, -13, 130, -12, 116, -6, 112, 1, 107, 11, 75, 15, 74, 16, 74, 17, 88, 28, 87, 30, 73, 35, 63, 40, 61, 43)
+
+[node name="region_54" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_54" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_54/Area2D" index="0"]
+visible = false
+position = Vector2(415, -418)
+polygon = PackedVector2Array(-11, 40, -26, 26, 12, 13, 14, 10, 24, 5, 38, 0, 39, -2, 25, -13, 25, -14, 26, -15, 58, -19, 64, -17, 72, -16, 76, -14, 83, -11, 94, -10, 101, -10, 105, -7, 109, -6, 115, -6, 119, -7, 124, -6, 128, -2, 135, -2, 139, -2, 140, 0, 145, 4, 149, 4, 149, 11, 150, 14, 148, 16, 146, 18, 144, 20, 145, 22, 146, 24, 145, 26, 131, 30, 120, 34, 107, 35, 95, 37, 89, 39, 79, 42, 66, 41, 45, 35, 40, 35, 36, 40, 29, 40, 17, 34, 13, 33, 9, 35, 5.9818687, 37.102676, -1, 37, -7, 39)
+
+[node name="Polygon2D" parent="Board/Map/region_54/Area2D" index="1"]
+position = Vector2(415, -418)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-11, 40, -26, 26, 12, 13, 14, 10, 24, 5, 38, 0, 39, -2, 25, -13, 25, -14, 26, -15, 58, -19, 64, -17, 72, -16, 76, -14, 83, -11, 94, -10, 101, -10, 105, -7, 109, -6, 115, -6, 119, -7, 124, -6, 128, -2, 135, -2, 139, -2, 140, 0, 145, 4, 149, 4, 149, 11, 150, 14, 148, 16, 146, 18, 144, 20, 145, 22, 146, 24, 145, 26, 131, 30, 120, 34, 107, 35, 95, 37, 89, 39, 79, 42, 66, 41, 45, 35, 40, 35, 36, 40, 29, 40, 17, 34, 13, 33, 9, 35, 5.9818687, 37.102676, -1, 37, -7, 39)
+
+[node name="region_55" parent="Board/Map" instance=ExtResource("4_23dc1")]
+position = Vector2(-396, 215)
+
+[node name="Area2D" parent="Board/Map/region_55" index="0"]
+position = Vector2(125, 0)
+
+[node name="CollisionPolygon2D" parent="Board/Map/region_55/Area2D" index="0"]
+visible = false
+position = Vector2(481, -455)
+polygon = PackedVector2Array(28, 27, 17, 26, 10, 23, 6, 21, -2, 20, -8, 18, -3, 8, 1, 1, 15, -5, 17, -6, 19, -11, 24, -14, 28, -16, 34, -17, 35, -18, 36, -20, 36, -22, 131, -22, 126, -20, 122, -18, 120, -16, 121, -10, 118, -2, 114, 3, 108, 4, 105, 5, 97, 16, 92, 20, 89, 22, 87, 26, 83, 29, 85, 32, 90, 34, 92, 37, 83, 41, 79, 41, 74, 37, 73, 35, 69, 35, 62, 35, 58, 31, 53, 30, 49, 31, 43, 31, 39, 30, 35, 27)
+
+[node name="Polygon2D" parent="Board/Map/region_55/Area2D" index="1"]
+position = Vector2(481, -455)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(28, 27, 17, 26, 10, 23, 6, 21, -2, 20, -8, 18, -3, 8, 1, 1, 15, -5, 17, -6, 19, -11, 24, -14, 28, -16, 34, -17, 35, -18, 36, -20, 36, -22, 131, -22, 126, -20, 122, -18, 120, -16, 121, -10, 118, -2, 114, 3, 108, 4, 105, 5, 97, 16, 92, 20, 89, 22, 87, 26, 83, 29, 85, 32, 90, 34, 92, 37, 83, 41, 79, 41, 74, 37, 73, 35, 69, 35, 62, 35, 58, 31, 53, 30, 49, 31, 43, 31, 39, 30, 35, 27)
+
 [node name="Score" type="Label" parent="Board"]
 offset_left = 31.0
 offset_top = 520.0
@@ -55,3 +885,56 @@ offset_bottom = 31.0
 
 [editable path="Board/Map/region_1"]
 [editable path="Board/Map/region_2"]
+[editable path="Board/Map/region_3"]
+[editable path="Board/Map/region_4"]
+[editable path="Board/Map/region_5"]
+[editable path="Board/Map/region_6"]
+[editable path="Board/Map/region_7"]
+[editable path="Board/Map/region_8"]
+[editable path="Board/Map/region_9"]
+[editable path="Board/Map/region_10"]
+[editable path="Board/Map/region_11"]
+[editable path="Board/Map/region_12"]
+[editable path="Board/Map/region_13"]
+[editable path="Board/Map/region_14"]
+[editable path="Board/Map/region_15"]
+[editable path="Board/Map/region_16"]
+[editable path="Board/Map/region_17"]
+[editable path="Board/Map/region_18"]
+[editable path="Board/Map/region_19"]
+[editable path="Board/Map/region_20"]
+[editable path="Board/Map/region_21"]
+[editable path="Board/Map/region_22"]
+[editable path="Board/Map/region_23"]
+[editable path="Board/Map/region_24"]
+[editable path="Board/Map/region_25"]
+[editable path="Board/Map/region_26"]
+[editable path="Board/Map/region_27"]
+[editable path="Board/Map/region_28"]
+[editable path="Board/Map/region_29"]
+[editable path="Board/Map/region_30"]
+[editable path="Board/Map/region_31"]
+[editable path="Board/Map/region_32"]
+[editable path="Board/Map/region_33"]
+[editable path="Board/Map/region_34"]
+[editable path="Board/Map/region_35"]
+[editable path="Board/Map/region_36"]
+[editable path="Board/Map/region_37"]
+[editable path="Board/Map/region_38"]
+[editable path="Board/Map/region_39"]
+[editable path="Board/Map/region_40"]
+[editable path="Board/Map/region_41"]
+[editable path="Board/Map/region_42"]
+[editable path="Board/Map/region_43"]
+[editable path="Board/Map/region_44"]
+[editable path="Board/Map/region_45"]
+[editable path="Board/Map/region_46"]
+[editable path="Board/Map/region_47"]
+[editable path="Board/Map/region_48"]
+[editable path="Board/Map/region_49"]
+[editable path="Board/Map/region_50"]
+[editable path="Board/Map/region_51"]
+[editable path="Board/Map/region_52"]
+[editable path="Board/Map/region_53"]
+[editable path="Board/Map/region_54"]
+[editable path="Board/Map/region_55"]
