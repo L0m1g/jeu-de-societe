@@ -1,3 +1,1 @@
 extends Node
-
-enum GAME_STATE {WAITING, INITIALIZATION, RUNNING}

@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://dikq68r4momvf" path="res://scripts/region.gd" id="1_6hh2v"]
 
 [node name="region" type="Node2D"]
+script = ExtResource("1_6hh2v")
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("1_6hh2v")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 
 [node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_mouse_exited"]

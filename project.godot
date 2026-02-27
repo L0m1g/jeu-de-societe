@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jeu de societe"
-run/main_scene="uid://bn516j3k1jd4l"
+run/main_scene="uid://c0a7nvwligf0h"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
