@@ -3,6 +3,7 @@ extends Node2D
 @onready var polygon_2d: Polygon2D = $Area2D/Polygon2D
 
 @export var border: bool = false
+@export var region_type: Global.RegionType = Global.RegionType.FOREST
 
 func _on_mouse_entered():
 	polygon_2d.color = Color(1, 0, 0, 0.2)
