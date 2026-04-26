@@ -21,22 +21,22 @@
 script = ExtResource("2_hmnvu")
 
 [node name="Connection_screen" type="Sprite2D" parent="."]
-position = Vector2(592, 336)
-scale = Vector2(0.885, 0.885)
+position = Vector2(962.64, 538.08)
+scale = Vector2(1.4365475, 1.41125)
 texture = ExtResource("1_015mm")
 
 [node name="Settings" type="Sprite2D" parent="."]
-position = Vector2(1088, 64)
+position = Vector2(1832, 72)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("4_hmnvu")
 
 [node name="Steam_HUD" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 544.0
-offset_top = 392.0
-offset_right = 584.0
-offset_bottom = 432.0
+offset_left = 936.0
+offset_top = 672.0
+offset_right = 976.0
+offset_bottom = 712.0
 
 [node name="Panel" type="Panel" parent="Steam_HUD"]
 layout_mode = 0
