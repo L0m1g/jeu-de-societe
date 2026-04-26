@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn516j3k1jd4l"]
+[gd_scene load_steps=10 format=3 uid="uid://bn516j3k1jd4l"]
 
 [ext_resource type="Texture2D" uid="uid://bkclsuxv86of0" path="res://assets/images/connection_screen.png" id="1_015mm"]
 [ext_resource type="FontFile" uid="uid://bd7uocciuawmv" path="res://assets/fonts/(KING ARTHUR).ttf" id="2_0hy3y"]
 [ext_resource type="Script" uid="uid://bjobernxgol1" path="res://scripts/connection_manager.gd" id="2_hmnvu"]
+[ext_resource type="Texture2D" uid="uid://b661157ufqxi" path="res://assets/images/settings.png" id="4_hmnvu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6s73"]
 
@@ -20,16 +21,22 @@
 script = ExtResource("2_hmnvu")
 
 [node name="Connection_screen" type="Sprite2D" parent="."]
-position = Vector2(576, 264)
+position = Vector2(592, 336)
+scale = Vector2(0.885, 0.885)
 texture = ExtResource("1_015mm")
+
+[node name="Settings" type="Sprite2D" parent="."]
+position = Vector2(1088, 64)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("4_hmnvu")
 
 [node name="Steam_HUD" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 526.0
-offset_top = 336.0
-offset_right = 566.0
-offset_bottom = 376.0
+offset_left = 544.0
+offset_top = 392.0
+offset_right = 584.0
+offset_bottom = 432.0
 
 [node name="Panel" type="Panel" parent="Steam_HUD"]
 layout_mode = 0
@@ -50,7 +57,7 @@ theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.39215687)
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_0hy3y")
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e6s73")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8c6fj")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_sef50")
@@ -67,7 +74,7 @@ theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0.39215687)
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_0hy3y")
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e6s73")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8c6fj")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_sef50")

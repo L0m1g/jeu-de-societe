@@ -1,0 +1,36 @@
+keys,fr,en
+NATIONS_AMAZONS,Amazones,Amazons
+NATIONS_DWARVES,Nains,Dwarves
+NATIONS_ELVES,Elfes,Elves
+NATIONS_GHOULS,Zombies,Ghouls
+NATIONS_GIANTS,Geants,Giants
+NATIONS_HALFLINGS,Mi-portions,Halflings
+NATIONS_HUMANS,Humains,Humans
+NATIONS_LOST_TRIBES,Tribus oubliees,Lost Tribes
+NATIONS_ORCS,Orcs,Orcs
+NATIONS_RATMEN,Hommes-rats,Ratmen
+NATIONS_SKELETONS,Squelettes,Skeletons
+NATIONS_SORCERERS,Sorciers,Sorcerers
+NATIONS_TRITONS,Tritons,Tritons
+NATIONS_TROLLS,Trolls,Trolls
+NATIONS_WIZARDS,Mages,Wizards
+UI_FREE,Gratuit,Free
+UI_CURRENT_PLAYER,C'est le tour de,It's the turn of
+UI_TURN,Tour,Turn
+UI_COINS,Pièces :,Coins:
+UI_TOKENS,Pions :,Tokens:
+UI_NO_NATION,Aucune nation,No nation
+UI_WAITING,En attente...,Waiting...
+UI_CONQUEST,Conquérir,Conquer
+UI_DECLINE,Passer en déclin,Go into Decline
+UI_END_CONQUEST,Fin de conquête,End Conquest
+UI_ROLL_DIE,Lancer le dé,Roll Die
+UI_END_TURN,Fin du tour,End Turn
+UI_FINAL_SCORES,Scores finaux,Final Scores
+UI_WAITING_TITLE,En attente des joueurs...,Waiting for players...
+UI_PLAYERS_CONNECTED,joueurs connectés,players connected
+UI_TOKENS_REMAINING,Pions restants :,Tokens remaining:
+UI_PLACE_ENCAMPMENTS,Placez vos 5 campements,Place your 5 encampments
+UI_VALIDATE_REDEPLOY,Valider le redéploiement,Validate redeployment
+UI_ENCAMPMENTS,Campements,Encampments
+UI_ENCAMPMENTS_REMAINING,Campements placés :,Encampments placed:
