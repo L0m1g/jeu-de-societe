@@ -52,11 +52,19 @@ func _on_all_players_ready() -> void:
 
 @rpc("authority", "call_local", "reliable")
 func _start_game() -> void:
+	# Connecter le signal avant de changer de scène
+	get_tree().tree_changed.connect(_on_scene_ready, CONNECT_ONE_SHOT)
 	get_tree().change_scene_to_file("res://scenes/main_screen.tscn")
+
+func _on_scene_ready() -> void:
 	await get_tree().process_frame
 	
+	var current_scene = get_tree().current_scene
+	if current_scene == null:
+		return
+	
 	var loader = LOADER_SCENE.instantiate()
-	get_tree().current_scene.add_child(loader)
+	current_scene.add_child(loader)
 	
 	_initialize_players()
 	_determine_player_order()
