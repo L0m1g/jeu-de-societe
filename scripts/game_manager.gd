@@ -55,13 +55,6 @@ func _on_all_players_ready() -> void:
 
 @rpc("authority", "call_local", "reliable")
 func _start_game() -> void:
-	# Connecter le signal avant de changer de scène
-	#print("GameManager: _start_game executing")
-	#get_tree().tree_changed.connect(_on_scene_ready, CONNECT_ONE_SHOT)
-	#get_tree().change_scene_to_file("res://scenes/main_screen.tscn")
-	#await get_tree().node_added
-	#await get_tree().process_frame
-	#print("GameManager: scene loaded")
 	print("GameManager: _start_game executing")
 	get_tree().change_scene_to_file("res://scenes/main_screen.tscn")
 	await get_tree().node_added
@@ -86,6 +79,14 @@ func _start_game() -> void:
 	
 	print("GameManager: determining player order")
 	_determine_player_order()
+	
+	var players_data: Dictionary = {}
+	for peer_id in players.keys():
+		players_data[peer_id] = {
+			"name": players[peer_id]["name"],
+			"victory_coins": players[peer_id]["victory_coins"]
+		}
+	_sync_players_data.rpc(players_data, player_order)
 	
 	game_state = Global.GameState.DRAFT
 	emit_signal("game_state_changed", game_state)
@@ -137,6 +138,30 @@ func _determine_player_order() -> void:
 	player_order = players.keys()
 	player_order.shuffle()
 	_sync_player_order.rpc(player_order)
+
+@rpc("authority", "call_local", "reliable")
+func _sync_players_data(players_data: Dictionary,
+						 order: Array) -> void:
+	# Reconstruire le dictionnaire players sur tous les clients
+	for peer_id in players_data.keys():
+		if not players.has(peer_id):
+			players[peer_id] = {
+				"name": players_data[peer_id]["name"],
+				"victory_coins": players_data[peer_id]["victory_coins"],
+				"active_nation": null,
+				"decline_nation": null,
+				"has_nation": false,
+				"ally_peer_id": -1,
+				"sorcerer_used_against": [],
+				"stout_decline_available": false,
+				"dragon_moved_this_turn": false,
+				"heroes_placed_this_turn": false,
+				"fortress_placed_this_turn": false,
+				"encampments_placed_this_turn": false,
+				"diplomat_chosen_this_turn": false
+			}
+	player_order = order
+	print("GameManager: players synced — %s" % str(players))
 
 @rpc("authority", "call_local", "reliable")
 func _sync_player_order(order: Array) -> void:
