@@ -39,6 +39,7 @@ signal all_players_ready
 
 func _ready() -> void:
 	NetworkManager.all_players_ready.connect(_on_all_players_ready)
+	print("GameManager ready, connected to all_players_ready")
 	DraftManager.all_nations_picked.connect(_on_all_nations_picked)
 	ConquestManager.conquest_phase_ended.connect(_on_conquest_phase_ended)
 	ConquestManager.redeploy_ended.connect(_on_redeploy_ended)
@@ -46,15 +47,54 @@ func _ready() -> void:
 	DeclineManager.decline_completed.connect(_on_decline_completed)
 
 func _on_all_players_ready() -> void:
+	print("GameManager: _on_all_players_ready called")
 	emit_signal("all_players_ready")
 	if multiplayer.is_server():
+		print("GameManager: calling _start_game.rpc()")
 		_start_game.rpc()
 
 @rpc("authority", "call_local", "reliable")
 func _start_game() -> void:
 	# Connecter le signal avant de changer de scène
-	get_tree().tree_changed.connect(_on_scene_ready, CONNECT_ONE_SHOT)
+	#print("GameManager: _start_game executing")
+	#get_tree().tree_changed.connect(_on_scene_ready, CONNECT_ONE_SHOT)
+	#get_tree().change_scene_to_file("res://scenes/main_screen.tscn")
+	#await get_tree().node_added
+	#await get_tree().process_frame
+	#print("GameManager: scene loaded")
+	print("GameManager: _start_game executing")
 	get_tree().change_scene_to_file("res://scenes/main_screen.tscn")
+	await get_tree().node_added
+	await get_tree().process_frame
+	print("GameManager: scene loaded")
+	
+	var current_scene = get_tree().current_scene
+	print("GameManager: current_scene = %s" % current_scene)
+	
+	if current_scene == null:
+		push_error("GameManager: current_scene est null")
+		return
+	
+	print("GameManager: instanciating loader")
+	var loader = LOADER_SCENE.instantiate()
+	current_scene.add_child(loader)
+	print("GameManager: loader added")
+	
+	print("GameManager: initializing players")
+	_initialize_players()
+	print("GameManager: players initialized — %s" % str(players))
+	
+	print("GameManager: determining player order")
+	_determine_player_order()
+	
+	game_state = Global.GameState.DRAFT
+	emit_signal("game_state_changed", game_state)
+	
+	print("GameManager: setting up draft")
+	DraftManager.setup_draft()
+	print("GameManager: starting draft turn")
+	DraftManager.start_draft_turn()
+	print("GameManager: done")
 
 func _on_scene_ready() -> void:
 	await get_tree().process_frame

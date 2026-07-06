@@ -21,6 +21,7 @@ func register_player(p_steam_id: int, p_username: String):
 func _check_all_players_ready():
 	print("Players: %s / %s" % [players.size(), required_players])
 	if players.size() >= required_players:
+		print("Emitting all_players_ready")
 		emit_signal("all_players_ready")
 
 func del_player(id: int):

@@ -1,6 +1,6 @@
 extends Polygon2D
 
-@onready var current_player_label: Label = $current_player
+@onready var current_player_label: Label = $"../CanvasLayer/InfoPanel/VBoxContainer/CurrentPlayerLabel"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

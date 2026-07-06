@@ -26,11 +26,6 @@ ConquestManager="*res://scripts/conquest_manager.gd"
 ScoringManager="*res://scripts/scoring_manager.gd"
 DeclineManager="*res://scripts/decline_manager.gd"
 
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-
 [editor]
 
 version_control/plugin_name="GitPlugin"

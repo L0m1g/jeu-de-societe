@@ -1116,19 +1116,22 @@ layout_mode = 2
 [node name="ScoreList" type="VBoxContainer" parent="CanvasLayer/EndGamePanel/VBoxContainer"]
 layout_mode = 2
 
-[node name="RdeployInfoPanel" type="PanelContainer" parent="CanvasLayer"]
+[node name="RedeployInfoPanel" type="PanelContainer" parent="CanvasLayer"]
 offset_left = 1688.0
 offset_top = 845.0
 offset_right = 1892.0
 offset_bottom = 1047.0
 
-[node name="TokensRemainingLabel" type="Label" parent="CanvasLayer/RdeployInfoPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/RedeployInfoPanel"]
 layout_mode = 2
 
-[node name="EncampmentInfoLabel" type="Label" parent="CanvasLayer/RdeployInfoPanel"]
+[node name="TokensRemainingLabel" type="Label" parent="CanvasLayer/RedeployInfoPanel/VBoxContainer"]
 layout_mode = 2
 
-[node name="ValidateButton" type="Button" parent="CanvasLayer/RdeployInfoPanel"]
+[node name="EncampmentInfoLabel" type="Label" parent="CanvasLayer/RedeployInfoPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ValidateButton" type="Button" parent="CanvasLayer/RedeployInfoPanel/VBoxContainer"]
 layout_mode = 2
 
 [connection signal="pressed" from="CanvasLayer/ActionPanel/HBoxContainer/ConquerButton" to="." method="_on_conquer_button_pressed"]
@@ -1136,7 +1139,7 @@ layout_mode = 2
 [connection signal="pressed" from="CanvasLayer/ActionPanel/HBoxContainer/EndConquestButton" to="." method="_on_end_conquest_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ActionPanel/HBoxContainer/RollDieButton" to="." method="_on_roll_die_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ActionPanel/HBoxContainer/EndTurnButton" to="." method="_on_end_turn_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/RdeployInfoPanel/ValidateButton" to="." method="_on_validate_redeploy_pressed"]
+[connection signal="pressed" from="CanvasLayer/RedeployInfoPanel/VBoxContainer/ValidateButton" to="." method="_on_validate_redeploy_pressed"]
 
 [editable path="Board/Map/region_1"]
 [editable path="Board/Map/region_2"]

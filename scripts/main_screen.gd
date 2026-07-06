@@ -14,7 +14,7 @@ extends Node2D
 @onready var player_panel = $CanvasLayer/PlayerPanel
 @onready var player_name_label = $CanvasLayer/PlayerPanel/VBoxContainer/PlayerNameLabel
 @onready var coins_label = $CanvasLayer/PlayerPanel/VBoxContainer/CoinsLabel
-@onready var nation_label = $CanvasLayer/PlayerPanel/VBoxContainer/NationLabel
+@onready var nation_label = $CanvasLayer/PlayerPanel/VBoxContainer/NationsLabel
 @onready var tokens_label = $CanvasLayer/PlayerPanel/VBoxContainer/TokensLabel
 @onready var die_result_panel = $CanvasLayer/DieResultPanel
 @onready var die_result_label = $CanvasLayer/DieResultPanel/VBoxContainer/DieResultLabel
